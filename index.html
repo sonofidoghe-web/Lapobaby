@@ -3,6 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lapo Baby</title>
+<style>html,body{margin:0;height:100%;overflow:hidden;background:#FFC20E}iframe{position:fixed;inset:0;width:100%;height:100%;border:0;background:#fff}</style>
+</head>
+<body>
+<iframe id="v" title="Lapo Baby"></iframe>
+<script type="text/plain" data-page="home"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Lapo Baby | Start your living and earn</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -138,7 +148,7 @@
     <span>Me <b>now</b></span>
   </div>
 
-  <a class="round profile" href="login.html" aria-label="Log in to your profile">
+  <a class="round profile" href="login.html?mode=login" aria-label="Log in to your profile">
     <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/></svg>
     <span class="dot"></span>
   </a>
@@ -155,7 +165,7 @@
   </div>
 
   <div class="chips" role="group" aria-label="Filter places">
-    <a class="chip memories" href="login.html">Memories</a>
+    <a class="chip memories" href="login.html?mode=login">Memories</a>
     <button class="chip" data-filter="top" aria-pressed="false">
       <svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4"/></svg>
       Top visited
@@ -167,25 +177,25 @@
     <button class="chip" data-filter="visited" aria-pressed="false">Visited</button>
   </div>
 
-  <a class="round side" style="top:54%" href="login.html" aria-label="Your account">
+  <a class="round side" style="top:54%" href="login.html?mode=login" aria-label="Your account">
     <svg class="redperson" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M3 22c0-5 4-8 9-8s9 3 9 8z"/></svg>
     <span class="dot"></span>
   </a>
-  <a class="round side" style="top:calc(54% + 48px)" href="login.html" aria-label="Location settings">
+  <a class="round side" style="top:calc(54% + 48px)" href="login.html?mode=login" aria-label="Location settings">
     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4 4l16 16"/></svg>
   </a>
-  <a class="round side" style="top:calc(54% + 96px)" href="login.html" aria-label="Map layers">
+  <a class="round side" style="top:calc(54% + 96px)" href="login.html?mode=login" aria-label="Map layers">
     <svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5zM3 12.5l9 5 9-5M3 16.5l9 5 9-5"/></svg>
   </a>
-  <a class="round side" style="top:calc(54% + 144px)" href="login.html" aria-label="Find my location">
+  <a class="round side" style="top:calc(54% + 144px)" href="login.html?mode=login" aria-label="Find my location">
     <svg viewBox="0 0 24 24"><path d="M21 3L3 11l8 2 2 8z"/></svg>
   </a>
 
-  <a class="round bl" style="left:8px" href="login.html" aria-label="Friends">
+  <a class="round bl" style="left:8px" href="login.html?mode=login" aria-label="Friends">
     <svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="3.5"/><path d="M3 21c0-4 3-7 7-7M16 14.5a3.5 3.5 0 1 0 0-.01M18.5 17l3 3"/></svg>
   </a>
-  <a class="round bl avatar" style="left:62px" href="login.html" aria-label="Your avatar" id="bl-avatar"></a>
-  <a class="addfriends" href="login.html">
+  <a class="round bl avatar" style="left:62px" href="login.html?mode=login" aria-label="Your avatar" id="bl-avatar"></a>
+  <a class="addfriends" href="login.html?mode=login">
     <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-7 7-7M18 14v6M15 17h6"/></svg>
     Add friends
   </a>
@@ -196,7 +206,7 @@
     <h1 id="join-title">Join Lapo Baby</h1>
     <p>Start your living and earn</p>
     <a class="btn" href="login.html?mode=signup">Sign up for free</a>
-    <a class="btn outline" href="login.html">Log in</a>
+    <a class="btn outline" href="login.html?mode=login">Log in</a>
   </div>
 </section>
 
@@ -470,6 +480,1817 @@
   var timer;
   draw(); sizeSheet();
   window.addEventListener("resize", function () { clearTimeout(timer); timer = setTimeout(function () { draw(); sizeSheet(); }, 120); });
+})();
+<\/script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+  const auth = getAuth(initializeApp({
+    apiKey: "AIzaSyC42fUKbNURnKeZR5KLjrAk9StZSbaUB9g",
+    authDomain: "repaid-edef4.firebaseapp.com",
+    projectId: "repaid-edef4",
+    storageBucket: "repaid-edef4.firebasestorage.app",
+    messagingSenderId: "514373962526",
+    appId: "1:514373962526:web:244c032e8b3b3b0002570f"
+  }));
+  onAuthStateChanged(auth, (u) => { if (u) go("city.html",true); });
+<\/script>
+</body>
+</html>
+</script>
+<script type="text/plain" data-page="login"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Log in or sign up | Lapo Baby</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --danfo:#FFC20E; --ink:#17140F; --paper:#FFFBEF; --line:#D9D1BC; --muted:#6B6558;
+    --field:#F6F2E6; --error:#B3261E; --ok:#1B6B3A; --link:#1F4FD8;
+  }
+  * { box-sizing:border-box; margin:0; }
+  body {
+    font-family:"DM Sans",system-ui,sans-serif; color:var(--ink); background:var(--paper);
+    min-height:100vh; padding-bottom:max(24px, env(safe-area-inset-bottom,0px));
+  }
+  .top {
+    background:var(--danfo); position:relative; padding:calc(16px + env(safe-area-inset-top,0px)) 20px 84px; text-align:center;
+  }
+  .top::after { content:""; position:absolute; left:0; right:0; bottom:0; height:14px; background:var(--ink); }
+  .back { position:absolute; left:16px; top:calc(16px + env(safe-area-inset-top,0px)); font-weight:700; font-size:15px; color:var(--ink); text-decoration:none; }
+  .back:hover { text-decoration:underline; }
+  .brand { margin-top:44px; display:inline-flex; align-items:center; gap:10px; }
+  .brand h1 { font-family:"Bricolage Grotesque",Georgia,sans-serif; font-weight:800; font-size:38px; letter-spacing:-.03em; }
+  .age { background:var(--ink); color:var(--danfo); font-weight:800; font-size:12px; padding:4px 8px; border-radius:999px; }
+  .tag { margin-top:6px; font-weight:600; font-size:15px; }
+
+  .card {
+    position:relative; z-index:2; width:calc(100% - 32px); max-width:440px; margin:-58px auto 0;
+    background:#fff; border:2px solid var(--ink); border-radius:20px; box-shadow:6px 6px 0 var(--ink); padding:18px;
+  }
+  .tabs { display:grid; grid-template-columns:1fr 1fr; background:var(--field); border:2px solid var(--ink); border-radius:12px; padding:3px; margin-bottom:18px; }
+  .tab { height:40px; border:0; background:none; border-radius:9px; font:inherit; font-weight:700; font-size:15px; color:var(--muted); cursor:pointer; }
+  .tab[aria-selected="true"] { background:var(--ink); color:var(--danfo); }
+
+  label.l { display:block; font-weight:700; font-size:14px; margin-bottom:6px; }
+  .field { margin-bottom:14px; }
+  .input {
+    display:flex; align-items:center; width:100%; height:48px; background:var(--field);
+    border:2px solid transparent; border-radius:12px; padding:0 14px;
+  }
+  .input:focus-within { border-color:var(--ink); background:#fff; }
+  .input input { flex:1; min-width:0; height:100%; border:0; background:none; font:inherit; font-size:16px; color:var(--ink); outline:0; }
+  .input select { flex:1; min-width:0; height:100%; border:0; background:none; font:inherit; font-size:16px; color:var(--ink); outline:0; }
+  .input input::placeholder { color:#9A9382; }
+  .at { font-weight:700; color:var(--muted); margin-right:2px; }
+  .eye { flex:none; border:0; background:none; width:36px; height:36px; display:grid; place-items:center; cursor:pointer; color:var(--muted); border-radius:8px; }
+  .eye svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+  .hint { font-size:13px; color:var(--muted); margin-top:6px; }
+  button:focus-visible, a:focus-visible { outline:3px solid var(--ink); outline-offset:2px; }
+
+  .agree { display:flex; gap:10px; align-items:flex-start; background:var(--field); border-radius:12px; padding:12px; font-size:14px; line-height:1.4; margin-bottom:16px; }
+  .agree input { flex:none; width:20px; height:20px; margin-top:1px; accent-color:var(--ink); }
+  .agree a, .link { color:var(--link); font-weight:600; }
+  .link { background:none; border:0; padding:0; font:inherit; font-weight:700; font-size:14px; cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
+
+  .go {
+    width:100%; height:52px; background:var(--danfo); color:var(--ink); border:2px solid var(--ink); border-radius:999px;
+    font:inherit; font-weight:800; font-size:16px; cursor:pointer; box-shadow:0 3px 0 var(--ink);
+  }
+  .go:active { transform:translateY(2px); box-shadow:0 1px 0 var(--ink); }
+  .go:disabled { opacity:.6; cursor:wait; }
+  .note { text-align:center; font-size:13px; color:var(--muted); margin-top:12px; }
+  .msg { min-height:20px; margin-top:12px; font-size:14px; font-weight:600; text-align:center; }
+  .msg.error { color:var(--error); } .msg.ok { color:var(--ok); }
+  .forgot { margin:-2px 0 16px; }
+  [hidden] { display:none !important; }
+
+  .social { display:flex; justify-content:center; align-items:center; gap:8px; margin-top:26px; flex-wrap:wrap; }
+  .official { display:inline-flex; align-items:center; gap:6px; height:38px; padding:0 14px; background:#fff; border:2px solid var(--ink); border-radius:999px; font-weight:700; font-size:14px; }
+  .official svg { width:16px; height:16px; fill:var(--ok); }
+  .social a.ic { width:38px; height:38px; display:grid; place-items:center; background:#fff; border:2px solid var(--ink); border-radius:50%; color:var(--ink); }
+  .social a.ic svg { width:18px; height:18px; fill:currentColor; }
+
+  @media (min-width:700px) { .top { padding-bottom:96px; } .card { padding:24px; } }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <a class="back" href="index.html">&larr; Back to the map</a>
+  <div class="brand"><h1>Lapo Baby</h1><span class="age">18+</span></div>
+  <p class="tag">Start your living and earn.</p>
+</div>
+
+<main class="card">
+  <div class="tabs" role="tablist" aria-label="Account">
+    <button class="tab" role="tab" id="tab-signup" aria-selected="true">Create account</button>
+    <button class="tab" role="tab" id="tab-login" aria-selected="false">Log in</button>
+  </div>
+
+  <\!-- Create account -->
+  <form id="signupForm" novalidate>
+    <div class="field">
+      <label class="l" for="su-name">Your name</label>
+      <div class="input"><input id="su-name" type="text" autocomplete="name" placeholder="e.g. Tolu Adebayo"></div>
+    </div>
+    <div class="field">
+      <label class="l" for="su-user">Username</label>
+      <div class="input"><span class="at">@</span><input id="su-user" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="tolu_eko"></div>
+      <p class="hint">This is your name in Lapo Baby.</p>
+    </div>
+    <div class="field">
+      <label class="l" for="su-pass">Password</label>
+      <div class="input">
+        <input id="su-pass" type="password" autocomplete="new-password">
+        <button type="button" class="eye" data-target="su-pass" aria-label="Show password"></button>
+      </div>
+      <p class="hint">At least 8 characters. Not 123456.</p>
+    </div>
+    <div class="field">
+      <label class="l" for="su-email">Email (optional)</label>
+      <div class="input"><input id="su-email" type="email" autocomplete="email" placeholder="you@email.com"></div>
+      <p class="hint">So you can get back in if you forget your password.</p>
+    </div>
+    <div class="field">
+      <label class="l" for="su-country">Country</label>
+      <div class="input"><select id="su-country"><option value="">Choose your country</option><option>Nigeria</option><option>USA</option></select></div>
+    </div>
+    <div class="field">
+      <label class="l" for="su-state">State</label>
+      <div class="input"><select id="su-state" disabled><option value="">Choose your country first</option></select></div>
+    </div>
+    <div class="field">
+      <label class="l">Get paid in</label>
+      <div class="tabs" id="cur" style="margin-bottom:0">
+        <button type="button" class="tab" data-c="NGN" aria-selected="true">Naira</button>
+        <button type="button" class="tab" data-c="USD" aria-selected="false">Dollar</button>
+      </div>
+      <p class="hint">You earn for followers, views, likes, comments and shares.</p>
+    </div>
+    <label class="agree">
+      <input type="checkbox" id="su-agree">
+      <span>I'm <b>18+</b> and I agree to the <a href="terms.html">Terms</a>, <a href="privacy.html">Privacy Policy</a> and <a href="disclaimer.html">Disclaimer</a>.</span>
+    </label>
+    <button class="go" id="su-submit" type="submit">Sign up &middot; it's free</button>
+    <p class="msg" id="su-msg" role="status" aria-live="polite"></p>
+    <p class="note">You will live in the same Lagos as everyone else who signs up.</p>
+  </form>
+
+  <\!-- Log in -->
+  <form id="loginForm" novalidate hidden>
+    <div class="field">
+      <label class="l" for="li-id">Username or email</label>
+      <div class="input"><input id="li-id" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="tolu_eko"></div>
+    </div>
+    <div class="field">
+      <label class="l" for="li-pass">Password</label>
+      <div class="input">
+        <input id="li-pass" type="password" autocomplete="current-password">
+        <button type="button" class="eye" data-target="li-pass" aria-label="Show password"></button>
+      </div>
+    </div>
+    <p class="forgot"><button type="button" class="link" id="forgot">Forgot password?</button></p>
+    <button class="go" id="li-submit" type="submit">Log in</button>
+    <p class="msg" id="li-msg" role="status" aria-live="polite"></p>
+    <p class="note">Welcome back to Lagos.</p>
+  </form>
+</main>
+
+<div class="social" aria-label="Lapo Baby on social media">
+  <span class="official"><svg viewBox="0 0 24 24"><path d="M12 1l2.6 2 3.3-.3 1.2 3.1 3 1.5-.9 3.2.9 3.2-3 1.5-1.2 3.1-3.3-.3L12 23l-2.6-2-3.3.3-1.2-3.1-3-1.5.9-3.2-.9-3.2 3-1.5 1.2-3.1 3.3.3zm-1.2 14.4l6-6-1.4-1.4-4.6 4.6-2-2-1.4 1.4z"/></svg>Official</span>
+  <a class="ic" href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.2-8.3L1.9 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.3 4.7H5.5z"/></svg></a>
+  <a class="ic" href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.2v13.3a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.5a5.8 5.8 0 1 0 5 5.8V8.6a7 7 0 0 0 4 1.3V6.7a4 4 0 0 1-4-4.7z"/></svg></a>
+  <a class="ic" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zM17.2 5.5a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM16 2H8a6 6 0 0 0-6 6v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4z"/></svg></a>
+  <a class="ic" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.5 8.5h3V20h-3zM6 3.5a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6zM10 8.5h2.9v1.6c.5-.9 1.7-1.9 3.5-1.9 3.5 0 4.1 2.3 4.1 5.3V20h-3v-5.7c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3V20h-3z"/></svg></a>
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
+  import {
+    getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,
+    sendPasswordResetEmail, updateProfile
+  } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyC42fUKbNURnKeZR5KLjrAk9StZSbaUB9g",
+    authDomain: "repaid-edef4.firebaseapp.com",
+    projectId: "repaid-edef4",
+    storageBucket: "repaid-edef4.firebasestorage.app",
+    messagingSenderId: "514373962526",
+    appId: "1:514373962526:web:244c032e8b3b3b0002570f",
+    measurementId: "G-2HL2M9MEH7"
+  };
+  const app = initializeApp(firebaseConfig);
+  try { getAnalytics(app); } catch (e) {}
+  const auth = getAuth(app);
+
+  const $ = (id) => document.getElementById(id);
+  const STATES = { Nigeria: "Abia,Adamawa,Akwa Ibom,Anambra,Bauchi,Bayelsa,Benue,Borno,Cross River,Delta,Ebonyi,Edo,Ekiti,Enugu,FCT Abuja,Gombe,Imo,Jigawa,Kaduna,Kano,Katsina,Kebbi,Kogi,Kwara,Lagos,Nasarawa,Niger,Ogun,Ondo,Osun,Oyo,Plateau,Rivers,Sokoto,Taraba,Yobe,Zamfara".split(","), USA: "Alabama,Alaska,Arizona,Arkansas,California,Colorado,Connecticut,Delaware,Florida,Georgia,Hawaii,Idaho,Illinois,Indiana,Iowa,Kansas,Kentucky,Louisiana,Maine,Maryland,Massachusetts,Michigan,Minnesota,Mississippi,Missouri,Montana,Nebraska,Nevada,New Hampshire,New Jersey,New Mexico,New York,North Carolina,North Dakota,Ohio,Oklahoma,Oregon,Pennsylvania,Rhode Island,South Carolina,South Dakota,Tennessee,Texas,Utah,Vermont,Virginia,Washington,West Virginia,Wisconsin,Wyoming".split(",") };
+  let currency = "NGN";
+  $("su-country").addEventListener("change", () => {
+    const list = STATES[$("su-country").value] || [], st = $("su-state");
+    st.innerHTML = '<option value="">' + (list.length ? "Choose your state" : "Choose your country first") + "</option>" + list.map((x) => "<option>" + x + "</option>").join("");
+    st.disabled = !list.length;
+  });
+  document.querySelectorAll("#cur .tab").forEach((b) => b.addEventListener("click", () => {
+    currency = b.dataset.c;
+    document.querySelectorAll("#cur .tab").forEach((x) => x.setAttribute("aria-selected", x === b));
+  }));
+  const EYE = '<svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>';
+  const EYE_OFF = '<svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg>';
+  document.querySelectorAll(".eye").forEach((b) => {
+    b.innerHTML = EYE;
+    b.addEventListener("click", () => {
+      const input = $(b.dataset.target);
+      const show = input.type === "password";
+      input.type = show ? "text" : "password";
+      b.innerHTML = show ? EYE_OFF : EYE;
+      b.setAttribute("aria-label", show ? "Hide password" : "Show password");
+    });
+  });
+
+  /* Usernames are stored as a private sign-in address. If the person gives no email,
+     this address is used. It never receives mail. */
+  const nameToEmail = (u) => u + "@users.lapobaby.invalid";
+
+  const errors = {
+    "auth/email-already-in-use": "That username or email is already taken.",
+    "auth/invalid-email": "That email does not look right.",
+    "auth/weak-password": "Use a password with at least 8 characters.",
+    "auth/invalid-credential": "Username or password is incorrect.",
+    "auth/user-not-found": "No account found with those details.",
+    "auth/wrong-password": "Username or password is incorrect.",
+    "auth/too-many-requests": "Too many attempts. Wait a moment and try again.",
+    "auth/network-request-failed": "No connection. Check your internet and try again.",
+    "auth/operation-not-allowed": "Email and password sign-in is not turned on in Firebase yet."
+  };
+  const say = (el, text, type) => { el.textContent = text; el.className = "msg " + (type || ""); };
+
+  /* tabs */
+  function setTab(which) {
+    const signup = which === "signup";
+    $("signupForm").hidden = !signup;
+    $("loginForm").hidden = signup;
+    $("tab-signup").setAttribute("aria-selected", signup);
+    $("tab-login").setAttribute("aria-selected", !signup);
+    
+  }
+  $("tab-signup").addEventListener("click", () => setTab("signup"));
+  $("tab-login").addEventListener("click", () => setTab("login"));
+  setTab(new URLSearchParams(window.__Q).get("mode") === "login" ? "login" : "signup");
+
+  /* sign up */
+  $("signupForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const msg = $("su-msg");
+    const name = $("su-name").value.trim();
+    const user = $("su-user").value.trim().toLowerCase().replace(/^@/, "");
+    const pass = $("su-pass").value;
+    const email = $("su-email").value.trim();
+    if (!name) return say(msg, "Enter your name.", "error");
+    if (!/^[a-z0-9_]{3,20}$/.test(user)) return say(msg, "Username: 3 to 20 letters, numbers or underscores.", "error");
+    if (pass.length < 8) return say(msg, "Password must be at least 8 characters.", "error");
+    if (pass === "12345678" || pass === "123456") return say(msg, "Pick a stronger password.", "error");
+    if (!$("su-country").value) return say(msg, "Choose your country.", "error");
+    if (!$("su-state").value) return say(msg, "Choose your state.", "error");
+    if (!$("su-agree").checked) return say(msg, "Confirm you are 18+ and agree to the terms.", "error");
+
+    $("su-submit").disabled = true; say(msg, "");
+    try {
+      const cred = await createUserWithEmailAndPassword(auth, email || nameToEmail(user), pass);
+      await updateProfile(cred.user, { displayName: name });
+      say(msg, "Account created. Welcome to Lagos, @" + user + ".", "ok");
+      sessionStorage.setItem("lb_username", user);
+      sessionStorage.setItem("lb_profile", JSON.stringify({ country: $("su-country").value, state: $("su-state").value, currency }));
+      go("avatar.html");
+    } catch (err) {
+      say(msg, errors[err.code] || "Something went wrong. Try again.", "error");
+    } finally { $("su-submit").disabled = false; }
+  });
+
+  /* log in */
+  $("loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const msg = $("li-msg");
+    const id = $("li-id").value.trim().toLowerCase().replace(/^@/, "");
+    const pass = $("li-pass").value;
+    if (!id) return say(msg, "Enter your username or email.", "error");
+    if (!pass) return say(msg, "Enter your password.", "error");
+    $("li-submit").disabled = true; say(msg, "");
+    try {
+      await signInWithEmailAndPassword(auth, id.includes("@") ? id : nameToEmail(id), pass);
+      say(msg, "Welcome back to Lagos.", "ok");
+      go("city.html");
+    } catch (err) {
+      say(msg, errors[err.code] || "Something went wrong. Try again.", "error");
+    } finally { $("li-submit").disabled = false; }
+  });
+
+  /* forgot password */
+  $("forgot").addEventListener("click", async () => {
+    const msg = $("li-msg");
+    const id = $("li-id").value.trim();
+    if (!id.includes("@")) return say(msg, "Type the email you signed up with above, then tap Forgot password.", "error");
+    try {
+      await sendPasswordResetEmail(auth, id);
+      say(msg, "Reset email sent. Check your inbox.", "ok");
+    } catch (err) {
+      say(msg, errors[err.code] || "Could not send the reset email.", "error");
+    }
+  });
+<\/script>
+</body>
+</html>
+</script>
+<script type="text/plain" data-page="avatar"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Create your character | Lapo Baby</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=DM+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#17140F; --danfo:#FFC20E; }
+  * { box-sizing:border-box; margin:0; }
+  html, body { height:100%; overflow:hidden; }
+  body { font-family:"DM Sans",system-ui,sans-serif; color:var(--ink); background:linear-gradient(#DCDDE8,#F4F4F8 62%,#fff); }
+  .hello { position:absolute; top:calc(14px + env(safe-area-inset-top,0px)); left:0; right:0; text-align:center; }
+  .hello h1 { font-family:"Bricolage Grotesque",Georgia,sans-serif; font-weight:800; font-size:22px; letter-spacing:-.02em; }
+  .hello p { font-size:13px; font-weight:600; color:#5A5548; margin-top:2px; }
+  .stage { position:absolute; left:0; right:0; top:calc(70px + env(safe-area-inset-top,0px)); bottom:48vh; display:flex; justify-content:center; }
+  .stage svg { height:100%; width:auto; filter:drop-shadow(0 8px 6px rgba(0,0,0,.12)); }
+  .sheet {
+    position:absolute; left:0; right:0; bottom:0; height:48vh; background:#F7F8F6;
+    border-radius:24px 24px 0 0; box-shadow:0 -4px 18px rgba(0,0,0,.1);
+    display:flex; flex-direction:column; padding-bottom:calc(86px + env(safe-area-inset-bottom,0px));
+  }
+  .grab { width:56px; height:5px; border-radius:3px; background:#C9CCC8; margin:10px auto 6px; flex:none; }
+  .tabs { flex:none; display:flex; gap:4px; overflow-x:auto; padding:0 10px; border-bottom:1px solid #E4E6E2; scrollbar-width:none; }
+  .tabs::-webkit-scrollbar { display:none; }
+  .tab { flex:none; border:0; background:none; font:inherit; font-weight:700; font-size:14px; color:#8A8D88; padding:10px 12px; border-bottom:3px solid transparent; cursor:pointer; }
+  .tab[aria-selected="true"] { color:var(--ink); border-color:var(--ink); }
+  .opts { flex:1; overflow-y:auto; padding:16px; display:flex; flex-wrap:wrap; gap:12px; align-content:flex-start; }
+  .sw { width:52px; height:52px; border-radius:50%; border:3px solid #fff; box-shadow:0 0 0 1px #CFD2CD; cursor:pointer; }
+  .sw[aria-pressed="true"] { box-shadow:0 0 0 3px var(--ink); }
+  .opt { height:44px; padding:0 18px; border-radius:12px; border:2px solid #DADDD8; background:#fff; font:inherit; font-weight:700; font-size:14px; cursor:pointer; }
+  .opt[aria-pressed="true"] { border-color:var(--ink); background:var(--ink); color:#fff; }
+  .bar { position:absolute; left:16px; right:16px; bottom:calc(16px + env(safe-area-inset-bottom,0px)); max-width:420px; margin:0 auto; z-index:5; }
+  .go { width:100%; height:56px; border:0; border-radius:999px; background:#000; color:#fff; font:inherit; font-weight:700; font-size:17px; cursor:pointer; }
+  .go:disabled { opacity:.6; cursor:wait; }
+  .msg { text-align:center; font-size:13px; font-weight:600; color:#B3261E; margin-bottom:6px; min-height:16px; }
+  button:focus-visible { outline:3px solid var(--danfo); outline-offset:2px; }
+  @media (min-width:700px) { .sheet { left:50%; right:auto; width:520px; transform:translateX(-50%); } }
+</style>
+</head>
+<body>
+  <div class="hello"><h1>Create your character</h1><p id="who">You start with nothing. Make it count.</p></div>
+  <div class="stage" id="stage"></div>
+
+  <section class="sheet">
+    <div class="grab"></div>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="opts" id="opts"></div>
+  </section>
+
+  <div class="bar">
+    <p class="msg" id="msg" role="status"></p>
+    <button class="go" id="go">Start your living in Lagos</button>
+  </div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+  import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+  import { doc, getDoc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+  const app = initializeApp({
+    apiKey: "AIzaSyC42fUKbNURnKeZR5KLjrAk9StZSbaUB9g",
+    authDomain: "repaid-edef4.firebaseapp.com",
+    projectId: "repaid-edef4",
+    storageBucket: "repaid-edef4.firebasestorage.app",
+    messagingSenderId: "514373962526",
+    appId: "1:514373962526:web:244c032e8b3b3b0002570f",
+    measurementId: "G-2HL2M9MEH7"
+  });
+  const auth = getAuth(app), db = getFirestore(app);
+// Draws the Lapo Baby character as SVG. Used by the creator and the city.
+const DEFAULT = {
+  body: "man", skin: "#8D5A3B", hairStyle: "short", hairColor: "#1B1210", beard: "none",
+  topStyle: "long", top: "#FFFFFF", bottomStyle: "pants", bottom: "#4D6A96",
+  shoes: "#E8E8EC", hat: "none"
+};
+
+function avatarSVG(cfg) {
+  const c = Object.assign({}, DEFAULT, cfg || {});
+  const w = c.body === "woman";
+  const tx = w ? 33 : 30, tw = w ? 34 : 40;
+  let s = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 200">';
+
+  // hair behind the head
+  if (c.hairStyle === "afro") s += `<circle cx="50" cy="24" r="25" fill="${c.hairColor}"/>`;
+  if (c.hairStyle === "long") s += `<path d="M32 36q-4-27 18-27t18 27l3 44h-11V50H40v30H29z" fill="${c.hairColor}"/>`;
+
+  // legs and shoes
+  s += `<ellipse cx="41" cy="192" rx="10" ry="5" fill="${c.shoes}"/><ellipse cx="59" cy="192" rx="10" ry="5" fill="${c.shoes}"/>`;
+  if (c.bottomStyle === "skirt") {
+    s += `<rect x="38" y="140" width="9" height="50" rx="4" fill="${c.skin}"/><rect x="53" y="140" width="9" height="50" rx="4" fill="${c.skin}"/>`;
+    s += `<path d="M${tx - 1} 112h${tw + 2}l8 40H${tx - 9}z" fill="${c.bottom}"/>`;
+  } else {
+    s += `<rect x="36" y="110" width="13" height="80" rx="5" fill="${c.bottom}"/><rect x="51" y="110" width="13" height="80" rx="5" fill="${c.bottom}"/>`;
+    s += `<rect x="${tx}" y="104" width="${tw}" height="16" fill="${c.bottom}"/>`;
+  }
+
+  // arms
+  if (c.topStyle === "long") {
+    s += `<rect x="${tx - 11}" y="64" width="11" height="50" rx="5" fill="${c.top}"/><rect x="${tx + tw}" y="64" width="11" height="50" rx="5" fill="${c.top}"/>`;
+  } else {
+    s += `<rect x="${tx - 9}" y="66" width="9" height="46" rx="4" fill="${c.skin}"/><rect x="${tx + tw}" y="66" width="9" height="46" rx="4" fill="${c.skin}"/>`;
+    s += `<rect x="${tx - 11}" y="64" width="11" height="20" rx="5" fill="${c.top}"/><rect x="${tx + tw}" y="64" width="11" height="20" rx="5" fill="${c.top}"/>`;
+  }
+  s += `<circle cx="${tx - 5}" cy="117" r="5.5" fill="${c.skin}"/><circle cx="${tx + tw + 5}" cy="117" r="5.5" fill="${c.skin}"/>`;
+
+  // torso and neck
+  s += `<path d="M${tx} 68q0-8 9-10h${tw - 18}q9 2 9 10v50H${tx}z" fill="${c.top}"/>`;
+  s += `<rect x="45" y="50" width="10" height="12" fill="${c.skin}"/>`;
+
+  // head
+  s += `<circle cx="34" cy="38" r="4" fill="${c.skin}"/><circle cx="66" cy="38" r="4" fill="${c.skin}"/>`;
+  s += `<ellipse cx="50" cy="36" rx="16" ry="19" fill="${c.skin}"/>`;
+  s += `<ellipse cx="43" cy="37" rx="3.4" ry="2.4" fill="#fff"/><ellipse cx="57" cy="37" rx="3.4" ry="2.4" fill="#fff"/>`;
+  s += `<circle cx="43.6" cy="37" r="1.7" fill="#1B1210"/><circle cx="57.6" cy="37" r="1.7" fill="#1B1210"/>`;
+  s += `<path d="M39 32q4-3 8 0M53 32q4-3 8 0" stroke="#1B1210" stroke-width="1.6" fill="none" stroke-linecap="round"/>`;
+  if (w) s += `<path d="M39.5 35.5l-2-1.2M60.5 35.5l2-1.2" stroke="#1B1210" stroke-width="1.2" stroke-linecap="round"/>`;
+  s += `<path d="M48 42q2 2 4 0" stroke="rgba(0,0,0,.25)" stroke-width="1.2" fill="none" stroke-linecap="round"/>`;
+  s += `<path d="M45 47q5 3 10 0" stroke="#6B2F25" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
+
+  // beard
+  if (c.beard === "goatee") s += `<path d="M43 44q7-3 14 0q-7 2-14 0z" fill="${c.hairColor}"/><path d="M44 49q6 10 12 0q-6 2-12 0z" fill="${c.hairColor}"/>`;
+  if (c.beard === "full") s += `<path d="M34 38q0 26 16 26t16-26q-3 14-16 14T34 38z" fill="${c.hairColor}"/><path d="M43 44q7-3 14 0q-7 2-14 0z" fill="${c.hairColor}"/>`;
+
+  // hair on top
+  if (c.hairStyle === "short" || c.hairStyle === "bun" || c.hairStyle === "long")
+    s += `<path d="M34 34q0-21 16-21t16 21q-6-9-16-9t-16 9z" fill="${c.hairColor}"/>`;
+  if (c.hairStyle === "bun") s += `<circle cx="50" cy="9" r="7" fill="${c.hairColor}"/>`;
+
+  // hats
+  if (c.hat === "beanie") s += `<path d="M33 31q0-21 17-21t17 21z" fill="#3B6FD6"/><rect x="32" y="28" width="36" height="7" rx="3" fill="#2F58AE"/>`;
+  if (c.hat === "cap") s += `<path d="M34 31q0-19 16-19t16 19z" fill="#D9442B"/><path d="M32 31h34q9 0 12 5H32z" fill="#A83320"/>`;
+  if (c.hat === "fur") s += `<path d="M25 44q-4-34 25-34t25 34q-3-10-7-16-14-9-36 0-4 6-7 16z" fill="#7A5636"/><ellipse cx="29" cy="46" rx="6" ry="13" fill="#6A4A2E"/><ellipse cx="71" cy="46" rx="6" ry="13" fill="#6A4A2E"/>`;
+
+  return s + "</svg>";
+}
+
+
+  const cats = [
+    ["Body", "body", [["Man","man"],["Woman","woman"]]],
+    ["Skin", "skin", ["#F2D1B3","#E0AC83","#C68642","#8D5A3B","#5C3A28","#3B2417"]],
+    ["Hair", "hairStyle", [["None","none"],["Short","short"],["Afro","afro"],["Long","long"],["Bun","bun"]]],
+    ["Hair color", "hairColor", ["#1B1210","#4A2C1B","#8A5A2B","#D8B46A","#B8B8B8","#C0392B"]],
+    ["Beard", "beard", [["None","none"],["Goatee","goatee"],["Full","full"]]],
+    ["Top", "topStyle", [["Long sleeve","long"],["T-shirt","short"]]],
+    ["Top color", "top", ["#FFFFFF","#17140F","#FFC20E","#D9442B","#2F8F5B","#3B6FD6","#E7A6D8","#7B5BD6"]],
+    ["Bottom", "bottomStyle", [["Trousers","pants"],["Skirt","skirt"]]],
+    ["Bottom color", "bottom", ["#4D6A96","#17140F","#8B6B3E","#F2F0EA","#6B7F3A","#7B2D3A"]],
+    ["Shoes", "shoes", ["#E8E8EC","#17140F","#D9442B","#FFC20E","#8B5A3C"]],
+    ["Hat", "hat", [["None","none"],["Beanie","beanie"],["Cap","cap"],["Fur hat","fur"]]]
+  ];
+  const cfg = Object.assign({}, DEFAULT);
+  let active = 0, user = null;
+  const $ = (id) => document.getElementById(id);
+
+  function drawStage() { $("stage").innerHTML = avatarSVG(cfg); }
+  function drawTabs() {
+    $("tabs").innerHTML = "";
+    cats.forEach((c, i) => {
+      const b = document.createElement("button");
+      b.className = "tab"; b.role = "tab"; b.textContent = c[0];
+      b.setAttribute("aria-selected", i === active);
+      b.onclick = () => { active = i; drawTabs(); drawOpts(); };
+      $("tabs").appendChild(b);
+    });
+  }
+  function drawOpts() {
+    const [, key, list] = cats[active];
+    $("opts").innerHTML = "";
+    list.forEach((o) => {
+      const isColor = typeof o === "string";
+      const val = isColor ? o : o[1];
+      const b = document.createElement("button");
+      b.className = isColor ? "sw" : "opt";
+      if (isColor) { b.style.background = o; b.setAttribute("aria-label", o); } else b.textContent = o[0];
+      b.setAttribute("aria-pressed", cfg[key] === val);
+      b.onclick = () => { cfg[key] = val; drawStage(); drawOpts(); };
+      $("opts").appendChild(b);
+    });
+  }
+  drawStage(); drawTabs(); drawOpts();
+
+  onAuthStateChanged(auth, async (u) => {
+    if (!u) { go("login.html?mode=login",true); return; }
+    user = u;
+    $("who").textContent = (u.displayName ? u.displayName + ", you" : "You") + " start with nothing. Make it count.";
+    try {
+      const snap = await getDoc(doc(db, "users", u.uid));
+      if (snap.exists() && snap.data().avatar && !window.__Q.includes("edit")) go("city.html",true);
+    } catch (e) { /* first visit, nothing saved yet */ }
+  });
+
+  $("go").onclick = async () => {
+    if (!user) return;
+    $("go").disabled = true; $("msg").textContent = "";
+    const synthetic = (user.email || "").endsWith("@users.lapobaby.invalid");
+    const username = sessionStorage.getItem("lb_username") || (synthetic ? user.email.split("@")[0] : "");
+    try {
+      await setDoc(doc(db, "users", user.uid), {
+        name: user.displayName || "", username, avatar: cfg, followers: 0, currency: "NGN", ...JSON.parse(sessionStorage.getItem("lb_profile") || "{}"), createdAt: serverTimestamp()
+      }, { merge: true });
+      await setDoc(doc(db, "profiles", user.uid), { name: user.displayName || "", username, avatar: cfg });
+      if (username) await setDoc(doc(db, "usernames", username), { uid: user.uid }).catch(() => {});
+      go("city.html");
+    } catch (e) {
+      $("msg").textContent = "Could not save. Check that Firestore is turned on and the rules are set.";
+      $("go").disabled = false;
+    }
+  };
+<\/script>
+</body>
+</html>
+</script>
+<script type="text/plain" data-page="city"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Lagos | Lapo Baby</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#17140F; --pin:#D9622B; --danfo:#FFC20E; --nav-h:64px; }
+  * { box-sizing:border-box; margin:0; -webkit-tap-highlight-color:transparent; }
+  html, body { height:100%; overflow:hidden; background:#E6EDDC; }
+  body { font-family:"Avenir Next","Nunito Sans",system-ui,sans-serif; color:var(--ink); touch-action:none; }
+  canvas { position:fixed; inset:0; width:100%; height:100%; display:block; }
+
+  .places {
+    position:fixed; z-index:10; top:calc(env(safe-area-inset-top,0px) + 10px); left:0; right:0;
+    display:flex; gap:8px; padding:0 8px; overflow-x:auto; scrollbar-width:none; touch-action:pan-x;
+  }
+  .places::-webkit-scrollbar { display:none; }
+  .place {
+    flex:none; height:34px; padding:0 14px 0 6px; display:inline-flex; align-items:center; gap:8px;
+    background:#fff; border:0; border-radius:999px; box-shadow:0 1px 5px rgba(0,0,0,.15);
+    font:inherit; font-size:13px; font-weight:700; color:var(--ink); cursor:pointer;
+  }
+  .place i { width:22px; height:22px; border-radius:50%; background:var(--pin); display:grid; place-items:center; }
+  .place svg { width:12px; height:12px; fill:none; stroke:#fff; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+
+  nav {
+    position:fixed; z-index:20; left:0; right:0; bottom:0;
+    height:calc(var(--nav-h) + env(safe-area-inset-bottom,0px)); padding-bottom:env(safe-area-inset-bottom,0px);
+    background:#fff; border-top:1px solid #E6E2D8; display:grid; grid-template-columns:repeat(5,1fr); align-items:end;
+  }
+  .nb { border:0; background:none; font:inherit; font-size:12px; font-weight:700; color:#6B6558; height:var(--nav-h); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; cursor:pointer; }
+  .nb svg { width:26px; height:26px; fill:none; stroke:currentColor; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; }
+  .nb.on { color:var(--ink); }
+  .nb.on svg.fill { fill:var(--ink); }
+  .nb.live { color:var(--ink); }
+  .nb.live svg { width:42px; height:36px; }
+  .nb.live .tv { fill:var(--danfo); stroke:var(--ink); }
+  button:focus-visible { outline:3px solid var(--ink); outline-offset:-3px; }
+
+  #toast { position:fixed; z-index:30; left:50%; bottom:calc(var(--nav-h) + env(safe-area-inset-bottom,0px) + 14px); transform:translateX(-50%); background:var(--ink); color:#fff; padding:10px 16px; border-radius:999px; font-weight:700; font-size:14px; opacity:0; pointer-events:none; transition:opacity .2s; white-space:nowrap; }
+  #toast.show { opacity:1; }
+
+  .modal { position:fixed; z-index:40; inset:0; background:rgba(0,0,0,.45); display:flex; align-items:flex-end; justify-content:center; touch-action:auto; }
+  .modal[hidden] { display:none; }
+  .panel { width:100%; max-width:440px; background:#fff; border-radius:24px 24px 0 0; padding:20px 20px calc(20px + env(safe-area-inset-bottom,0px)); text-align:center; }
+  .panel .av { height:150px; }
+  .panel .av svg { height:100%; width:auto; }
+  .panel h2 { font-size:22px; font-weight:800; margin-top:6px; }
+  .panel p { color:#6B6558; font-weight:600; font-size:14px; margin-top:2px; }
+  .money { display:inline-block; margin:12px 0; padding:6px 14px; background:#F6F2E6; border-radius:999px; font-weight:800; }
+  .pbtn { display:block; width:100%; height:46px; border-radius:999px; font:inherit; font-weight:700; font-size:15px; cursor:pointer; margin-top:8px; border:2px solid var(--ink); background:#fff; color:var(--ink); }
+  .pbtn.dark { background:var(--ink); color:#fff; }
+
+  #loading { position:fixed; z-index:50; inset:0; background:var(--danfo); display:grid; place-items:center; font-weight:800; font-size:20px; }
+
+  nav { grid-template-columns:repeat(7,1fr); }
+  .nb { font-size:10.5px; } .nb svg { width:23px; height:23px; } .nb.live svg { width:38px; height:32px; }
+  #hud { position:fixed; z-index:10; top:calc(env(safe-area-inset-top,0px) + 54px); left:8px; display:flex; gap:6px; flex-wrap:wrap; pointer-events:none; }
+  #hud span { background:#fff; border-radius:999px; padding:5px 10px; font-size:12px; font-weight:800; box-shadow:0 1px 4px rgba(0,0,0,.15); }
+  #hud span.bad { background:#D9442B; color:#fff; } #hud span.rain { background:#3B6FD6; color:#fff; }
+  .sheetp { position:fixed; z-index:15; left:0; right:0; top:0; bottom:calc(var(--nav-h) + env(safe-area-inset-bottom,0px)); background:#fff; overflow-y:auto; touch-action:pan-y; }
+  .sheetp[hidden] { display:none; }
+  .ph { position:sticky; top:0; z-index:2; background:#fff; display:flex; align-items:center; gap:10px; padding:calc(12px + env(safe-area-inset-top,0px)) 14px 10px; border-bottom:1px solid #EEE9DA; }
+  .ph h2 { font-size:20px; font-weight:800; flex:1; }
+  .ph button { width:38px; height:38px; border-radius:50%; border:0; background:#F6F2E6; font:inherit; font-weight:800; cursor:pointer; }
+  .pb { padding:14px; }
+  .srch input { width:100%; height:46px; border:2px solid #E6E2D8; border-radius:14px; padding:0 14px; font:inherit; font-size:16px; outline:0; background:#F6F2E6; }
+  .srch input:focus { border-color:var(--ink); background:#fff; }
+  .stores { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; }
+  .store { border:0; background:#F6F2E6; border-radius:16px; padding:14px; text-align:left; font:inherit; cursor:pointer; min-height:96px; display:flex; flex-direction:column; justify-content:space-between; }
+  .store svg { width:28px; height:28px; fill:none; stroke:var(--ink); stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; }
+  .store b { font-size:14px; } .store small { color:#6B6558; font-weight:700; }
+  .items { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; }
+  .card { background:#fff; border:2px solid #EEE9DA; border-radius:16px; padding:10px; display:flex; flex-direction:column; gap:4px; }
+  .art { height:96px; border-radius:10px; background:#F6F2E6; display:grid; place-items:center; overflow:hidden; }
+  .art svg { width:100%; height:100%; } .art svg.ic { width:44px; height:44px; fill:none; stroke:var(--ink); stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+  .card b { font-size:13.5px; line-height:1.2; } .card span { font-weight:800; font-size:14px; } .card em { font-style:normal; font-size:12px; color:#6B6558; font-weight:700; }
+  .card button { height:36px; border:0; border-radius:999px; background:var(--danfo); font:inherit; font-weight:800; font-size:13px; cursor:pointer; margin-top:4px; }
+  .card button:disabled { background:#EEE9DA; color:#8A8578; cursor:default; }
+  .back { border:0; background:none; font:inherit; font-weight:800; font-size:14px; margin-top:12px; cursor:pointer; }
+  .gauge { height:14px; border-radius:7px; background:#EEE9DA; overflow:hidden; margin:8px 0; } .gauge i { display:block; height:100%; background:#27C45A; }
+  .box { background:#F6F2E6; border-radius:16px; padding:14px; margin-bottom:12px; } .box h3 { font-size:15px; margin-bottom:4px; } .box p { font-size:14px; font-weight:600; color:#4A4538; }
+  .box .go { margin-top:10px; width:100%; height:42px; border:0; border-radius:999px; background:var(--ink); color:#fff; font:inherit; font-weight:800; cursor:pointer; }
+  .things { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; } .things span { background:#fff; border-radius:999px; padding:5px 10px; font-size:13px; font-weight:700; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="places" id="places" aria-label="Places in Lagos"></div>
+
+<nav aria-label="Main">
+  <button class="nb on" data-nav="map"><svg class="fill" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4" fill="#fff" stroke="none"/></svg>Map</button>
+  <button class="nb" data-nav="buy"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM5 14v6h14v-6"/></svg>Buy</button>
+  <button class="nb" data-nav="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/></svg>Home</button>
+  <button class="nb live" data-nav="live" aria-label="Live"><svg viewBox="0 0 44 36"><path d="M16 5l6 5 6-5" stroke-width="2"/><rect class="tv" x="3" y="9" width="38" height="24" rx="6" stroke-width="2"/><text x="22" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#17140F" stroke="none" font-family="Nunito Sans,Arial,sans-serif">LIVE</text></svg></button>
+  <button class="nb" data-nav="phone"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg>Phone</button>
+  <button class="nb" data-nav="earn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 8l3 4 3-4M9 12h6M9 15h6M12 12v6"/></svg>Earn</button>
+  <button class="nb" data-nav="me"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Me</button>
+</nav>
+
+<div id="hud"></div>
+<section class="sheetp" id="panel" hidden><div class="ph"><h2 id="ptitle"></h2><button id="pclose" aria-label="Close">X</button></div><div class="pb" id="pbody"></div></section>
+<div class="modal" id="dlg" hidden><div class="panel"><h2 id="dt"></h2><p id="dp" style="margin:8px 0 12px"></p><div id="db"></div></div></div>
+<div id="toast" role="status"></div>
+<div class="modal" id="meModal" hidden>
+  <div class="panel">
+    <div class="av" id="meAv"></div>
+    <h2 id="meName"></h2>
+    <p id="meUser"></p>
+    <span class="money">Balance: &#8358;0</span>
+    <button class="pbtn dark" id="closeMe">Back to the city</button>
+    <button class="pbtn" id="logout">Log out</button>
+  </div>
+</div>
+<div id="loading">Loading Lagos...</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import { doc, getDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+const app = initializeApp({
+    apiKey: "AIzaSyC42fUKbNURnKeZR5KLjrAk9StZSbaUB9g",
+    authDomain: "repaid-edef4.firebaseapp.com",
+    projectId: "repaid-edef4",
+    storageBucket: "repaid-edef4.firebasestorage.app",
+    messagingSenderId: "514373962526",
+    appId: "1:514373962526:web:244c032e8b3b3b0002570f",
+    measurementId: "G-2HL2M9MEH7"
+  });
+  const auth = getAuth(app), db = getFirestore(app);
+// Draws the Lapo Baby character as SVG. Used by the creator and the city.
+const DEFAULT = {
+  body: "man", skin: "#8D5A3B", hairStyle: "short", hairColor: "#1B1210", beard: "none",
+  topStyle: "long", top: "#FFFFFF", bottomStyle: "pants", bottom: "#4D6A96",
+  shoes: "#E8E8EC", hat: "none"
+};
+
+function avatarSVG(cfg) {
+  const c = Object.assign({}, DEFAULT, cfg || {});
+  const w = c.body === "woman";
+  const tx = w ? 33 : 30, tw = w ? 34 : 40;
+  let s = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 200">';
+
+  // hair behind the head
+  if (c.hairStyle === "afro") s += `<circle cx="50" cy="24" r="25" fill="${c.hairColor}"/>`;
+  if (c.hairStyle === "long") s += `<path d="M32 36q-4-27 18-27t18 27l3 44h-11V50H40v30H29z" fill="${c.hairColor}"/>`;
+
+  // legs and shoes
+  s += `<ellipse cx="41" cy="192" rx="10" ry="5" fill="${c.shoes}"/><ellipse cx="59" cy="192" rx="10" ry="5" fill="${c.shoes}"/>`;
+  if (c.bottomStyle === "skirt") {
+    s += `<rect x="38" y="140" width="9" height="50" rx="4" fill="${c.skin}"/><rect x="53" y="140" width="9" height="50" rx="4" fill="${c.skin}"/>`;
+    s += `<path d="M${tx - 1} 112h${tw + 2}l8 40H${tx - 9}z" fill="${c.bottom}"/>`;
+  } else {
+    s += `<rect x="36" y="110" width="13" height="80" rx="5" fill="${c.bottom}"/><rect x="51" y="110" width="13" height="80" rx="5" fill="${c.bottom}"/>`;
+    s += `<rect x="${tx}" y="104" width="${tw}" height="16" fill="${c.bottom}"/>`;
+  }
+
+  // arms
+  if (c.topStyle === "long") {
+    s += `<rect x="${tx - 11}" y="64" width="11" height="50" rx="5" fill="${c.top}"/><rect x="${tx + tw}" y="64" width="11" height="50" rx="5" fill="${c.top}"/>`;
+  } else {
+    s += `<rect x="${tx - 9}" y="66" width="9" height="46" rx="4" fill="${c.skin}"/><rect x="${tx + tw}" y="66" width="9" height="46" rx="4" fill="${c.skin}"/>`;
+    s += `<rect x="${tx - 11}" y="64" width="11" height="20" rx="5" fill="${c.top}"/><rect x="${tx + tw}" y="64" width="11" height="20" rx="5" fill="${c.top}"/>`;
+  }
+  s += `<circle cx="${tx - 5}" cy="117" r="5.5" fill="${c.skin}"/><circle cx="${tx + tw + 5}" cy="117" r="5.5" fill="${c.skin}"/>`;
+
+  // torso and neck
+  s += `<path d="M${tx} 68q0-8 9-10h${tw - 18}q9 2 9 10v50H${tx}z" fill="${c.top}"/>`;
+  s += `<rect x="45" y="50" width="10" height="12" fill="${c.skin}"/>`;
+
+  // head
+  s += `<circle cx="34" cy="38" r="4" fill="${c.skin}"/><circle cx="66" cy="38" r="4" fill="${c.skin}"/>`;
+  s += `<ellipse cx="50" cy="36" rx="16" ry="19" fill="${c.skin}"/>`;
+  s += `<ellipse cx="43" cy="37" rx="3.4" ry="2.4" fill="#fff"/><ellipse cx="57" cy="37" rx="3.4" ry="2.4" fill="#fff"/>`;
+  s += `<circle cx="43.6" cy="37" r="1.7" fill="#1B1210"/><circle cx="57.6" cy="37" r="1.7" fill="#1B1210"/>`;
+  s += `<path d="M39 32q4-3 8 0M53 32q4-3 8 0" stroke="#1B1210" stroke-width="1.6" fill="none" stroke-linecap="round"/>`;
+  if (w) s += `<path d="M39.5 35.5l-2-1.2M60.5 35.5l2-1.2" stroke="#1B1210" stroke-width="1.2" stroke-linecap="round"/>`;
+  s += `<path d="M48 42q2 2 4 0" stroke="rgba(0,0,0,.25)" stroke-width="1.2" fill="none" stroke-linecap="round"/>`;
+  s += `<path d="M45 47q5 3 10 0" stroke="#6B2F25" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
+
+  // beard
+  if (c.beard === "goatee") s += `<path d="M43 44q7-3 14 0q-7 2-14 0z" fill="${c.hairColor}"/><path d="M44 49q6 10 12 0q-6 2-12 0z" fill="${c.hairColor}"/>`;
+  if (c.beard === "full") s += `<path d="M34 38q0 26 16 26t16-26q-3 14-16 14T34 38z" fill="${c.hairColor}"/><path d="M43 44q7-3 14 0q-7 2-14 0z" fill="${c.hairColor}"/>`;
+
+  // hair on top
+  if (c.hairStyle === "short" || c.hairStyle === "bun" || c.hairStyle === "long")
+    s += `<path d="M34 34q0-21 16-21t16 21q-6-9-16-9t-16 9z" fill="${c.hairColor}"/>`;
+  if (c.hairStyle === "bun") s += `<circle cx="50" cy="9" r="7" fill="${c.hairColor}"/>`;
+
+  // hats
+  if (c.hat === "beanie") s += `<path d="M33 31q0-21 17-21t17 21z" fill="#3B6FD6"/><rect x="32" y="28" width="36" height="7" rx="3" fill="#2F58AE"/>`;
+  if (c.hat === "cap") s += `<path d="M34 31q0-19 16-19t16 19z" fill="#D9442B"/><path d="M32 31h34q9 0 12 5H32z" fill="#A83320"/>`;
+  if (c.hat === "fur") s += `<path d="M25 44q-4-34 25-34t25 34q-3-10-7-16-14-9-36 0-4 6-7 16z" fill="#7A5636"/><ellipse cx="29" cy="46" rx="6" ry="13" fill="#6A4A2E"/><ellipse cx="71" cy="46" rx="6" ry="13" fill="#6A4A2E"/>`;
+
+  return s + "</svg>";
+}
+
+
+const $ = (id) => document.getElementById(id);
+function toast(t) { const el = $("toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("show"), 1800); }
+
+onAuthStateChanged(auth, async (u) => {
+  if (!u) { go("login.html?mode=login",true); return; }
+  let data = null;
+  try { const s = await getDoc(doc(db, "users", u.uid)); if (s.exists()) data = s.data(); } catch (e) {}
+  if (!data || !data.avatar) { go("avatar.html",true); return; }
+  start(u, data);
+});
+
+function start(user, data) {
+  $("loading").remove();
+
+  /* ---------- world ---------- */
+  const W = 1600, H = 1200, CS = 20, GW = W / CS, GH = H / CS, SEA = 1140;
+  const HR = [300, 600, 900], VR = [400, 800, 1200], RW = 60;
+  const XS = [[0,370],[430,770],[830,1170],[1230,1600]], YS = [[0,270],[330,570],[630,870],[930,1130]];
+  const TYPES = {
+    airport:["#B9C4D6","#7C8BA6"], mall:["#E7A6D8","#B4579E"], salon:["#F4A6C8","#D6457F"], police:["#6F8FD8","#34509A"],
+    hospital:["#FFFFFF","#D9442B"], school:["#E9C46A","#A97F1E"], market:["#F0A04B","#B5651D"], bank:["#8DBF9B","#3E7A55"],
+    garage:["#A9A9B0","#5E5E66"], church:["#EDE3CF","#8D7A55"], food:["#F28B5B","#B4481E"], theatre:["#C9A0DC","#7D4E98"],
+    plots:["#D9D4C3","#B7B09A"], beach:["#F2DFA8","#D9BE6A"], park:["#B9DB9C","#6B9E4A"]
+  };
+  const GRID = [
+    [["Murtala Muhammed Airport","airport"],["Ikeja City Mall","mall"],["Barbie Salon","salon"],["Police Station","police"]],
+    [["Lagos General Hospital","hospital"],["University of Lagos","school"],["Alaba International Market","market"],["Bank","bank"]],
+    [["Mechanic Workshop","garage"],["Church","church"],["Okele Spot","food"],["National Theatre","theatre"]],
+    [["Plots for sale","plots"],["Elegushi Beach","beach"],["Lekki Park","park"],["Plots for sale","plots"]]
+  ];
+  const buildings = [];
+  GRID.forEach((row, r) => row.forEach((cell, c) => {
+    const [x0, x1] = XS[c], [y0, y1] = YS[r];
+    const b = { name: cell[0], type: cell[1], x: x0 + 30, y: y0 + 30, w: x1 - x0 - 60, h: y1 - y0 - 60 };
+    if (c === 0) { b.x = x0 + 10; b.w = x1 - x0 - 40; }
+    b.open = b.type === "park" || b.type === "beach" || b.type === "plots";
+    b.tx = b.x + b.w / 2; b.ty = b.open ? b.y + b.h / 2 : b.y + b.h + 16;
+    buildings.push(b);
+  }));
+
+  const blocked = new Uint8Array(GW * GH);
+  for (let gy = 0; gy < GH; gy++) for (let gx = 0; gx < GW; gx++) {
+    const px = gx * CS + CS / 2, py = gy * CS + CS / 2;
+    let bl = py > SEA;
+    for (const b of buildings) if (!b.open && px > b.x - 4 && px < b.x + b.w + 4 && py > b.y - 4 && py < b.y + b.h + 4) { bl = true; break; }
+    blocked[gy * GW + gx] = bl ? 1 : 0;
+  }
+  const cellOf = (x, y) => Math.max(0, Math.min(GH - 1, (y / CS) | 0)) * GW + Math.max(0, Math.min(GW - 1, (x / CS) | 0));
+  function nearestFree(i) {
+    if (!blocked[i]) return i;
+    const x = i % GW, y = (i / GW) | 0;
+    for (let r = 1; r < 10; r++) for (let dy = -r; dy <= r; dy++) for (let dx = -r; dx <= r; dx++) {
+      const nx = x + dx, ny = y + dy;
+      if (nx >= 0 && ny >= 0 && nx < GW && ny < GH && !blocked[ny * GW + nx]) return ny * GW + nx;
+    }
+    return -1;
+  }
+  function Heap() {
+    const a = [];
+    return {
+      get size() { return a.length; },
+      push(f, i) { a.push([f, i]); let k = a.length - 1; while (k > 0) { const p = (k - 1) >> 1; if (a[p][0] <= a[k][0]) break; [a[p], a[k]] = [a[k], a[p]]; k = p; } },
+      pop() { const t = a[0], l = a.pop(); if (a.length) { a[0] = l; let k = 0; for (;;) { let c = 2 * k + 1; if (c >= a.length) break; if (c + 1 < a.length && a[c + 1][0] < a[c][0]) c++; if (a[k][0] <= a[c][0]) break; [a[k], a[c]] = [a[c], a[k]]; k = c; } } return t; }
+    };
+  }
+  const DIRS = [[1,0],[-1,0],[0,1],[0,-1],[1,1],[1,-1],[-1,1],[-1,-1]];
+  function findPath(sx, sy, tx, ty) {
+    const s = nearestFree(cellOf(sx, sy)), t = nearestFree(cellOf(tx, ty));
+    if (s < 0 || t < 0) return [];
+    const tcx = t % GW, tcy = (t / GW) | 0;
+    const g = new Float32Array(GW * GH).fill(1e9), from = new Int32Array(GW * GH).fill(-1), h = Heap();
+    g[s] = 0; h.push(0, s);
+    while (h.size) {
+      const i = h.pop()[1]; if (i === t) break;
+      const x = i % GW, y = (i / GW) | 0;
+      for (const [dx, dy] of DIRS) {
+        const nx = x + dx, ny = y + dy;
+        if (nx < 0 || ny < 0 || nx >= GW || ny >= GH) continue;
+        const n = ny * GW + nx; if (blocked[n]) continue;
+        if (dx && dy && (blocked[y * GW + nx] || blocked[ny * GW + x])) continue;
+        const cst = g[i] + (dx && dy ? 1.414 : 1);
+        if (cst < g[n]) { g[n] = cst; from[n] = i; h.push(cst + Math.hypot(nx - tcx, ny - tcy), n); }
+      }
+    }
+    if (from[t] < 0 && t !== s) return [];
+    const pts = []; for (let i = t; i !== -1; i = from[i]) pts.push({ x: (i % GW + .5) * CS, y: (((i / GW) | 0) + .5) * CS });
+    return pts.reverse();
+  }
+
+  /* ---------- sprites ---------- */
+  const sprite = (cfg) => { const im = new Image(); im.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(avatarSVG(cfg)); return im; };
+  const pick = (a) => a[(Math.random() * a.length) | 0];
+  const SK = ["#F2D1B3","#E0AC83","#C68642","#8D5A3B","#5C3A28","#3B2417"], HC = ["#1B1210","#4A2C1B","#8A5A2B"],
+        TC = ["#FFFFFF","#17140F","#FFC20E","#D9442B","#2F8F5B","#3B6FD6","#E7A6D8","#7B5BD6"], BC = ["#4D6A96","#17140F","#8B6B3E","#7B2D3A"];
+  const randCfg = () => ({ body: pick(["man","woman"]), skin: pick(SK), hairStyle: pick(["short","afro","long","bun"]), hairColor: pick(HC), beard: pick(["none","none","goatee"]), topStyle: pick(["long","short"]), top: pick(TC), bottomStyle: pick(["pants","skirt"]), bottom: pick(BC), shoes: pick(["#E8E8EC","#17140F"]), hat: pick(["none","none","none","cap"]) });
+
+  const me = { x: 0, y: 0, pts: [], img: sprite(data.avatar), speed: 85 };
+  const airport = buildings[0]; me.x = airport.tx; me.y = airport.ty;
+  const npcs = [];
+  function newNpcTarget(n) {
+    for (let k = 0; k < 30; k++) {
+      const x = Math.random() * W, y = Math.random() * SEA;
+      if (!blocked[cellOf(x, y)]) { n.pts = findPath(n.x, n.y, x, y); return; }
+    }
+  }
+  for (let i = 0; i < 26; i++) {
+    let x, y; do { x = Math.random() * W; y = Math.random() * SEA; } while (blocked[cellOf(x, y)]);
+    const n = { x, y, pts: [], img: sprite(randCfg()), speed: 24 + Math.random() * 16, wait: Math.random() * 3 };
+    npcs.push(n);
+  }
+  const cars = [];
+  const CC = ["#D9442B","#3B6FD6","#2F8F5B","#F2F0EA","#17140F","#7B5BD6","#FFC20E"];
+  HR.forEach((y, i) => { for (let k = 0; k < 2; k++) {
+    cars.push({ horiz: true, dir: 1, x: Math.random() * W, y: y - 14, v: 70 + Math.random() * 50, col: pick(CC), bus: Math.random() < .35 });
+    cars.push({ horiz: true, dir: -1, x: Math.random() * W, y: y + 14, v: 70 + Math.random() * 50, col: pick(CC), bus: Math.random() < .35 });
+  } });
+  VR.forEach((x) => {
+    cars.push({ horiz: false, dir: 1, x: x - 14, y: Math.random() * SEA, v: 70 + Math.random() * 50, col: pick(CC), bus: Math.random() < .35 });
+    cars.push({ horiz: false, dir: -1, x: x + 14, y: Math.random() * SEA, v: 70 + Math.random() * 50, col: pick(CC), bus: Math.random() < .35 });
+  });
+
+  /* ---------- trees ---------- */
+  const trees = [];
+  for (let i = 0; i < 90; i++) {
+    const x = Math.random() * W, y = Math.random() * SEA;
+    const onRoad = HR.some((r) => Math.abs(y - r) < 40) || VR.some((r) => Math.abs(x - r) < 40);
+    if (!onRoad && !blocked[cellOf(x, y)]) trees.push({ x, y, r: 6 + Math.random() * 5 });
+  }
+
+  /* ---------- canvas ---------- */
+  const cv = $("c"), ctx = cv.getContext("2d");
+  let vw = 0, vh = 0, dpr = 1;
+  function resize() { dpr = window.devicePixelRatio || 1; vw = innerWidth; vh = innerHeight; cv.width = vw * dpr; cv.height = vh * dpr; }
+  addEventListener("resize", resize); resize();
+  const cam = { x: 0, y: 0 };
+  let dest = null;
+
+  function walkTo(x, y) {
+    const p = findPath(me.x, me.y, x, y);
+    if (!p.length) { toast("You cannot go there"); return; }
+    me.pts = p; dest = { x: p[p.length - 1].x, y: p[p.length - 1].y };
+  }
+  cv.addEventListener("pointerdown", (e) => {
+    const wx = e.clientX + cam.x, wy = e.clientY + cam.y;
+    const b = buildings.find((q) => wx > q.x && wx < q.x + q.w && wy > q.y && wy < q.y + q.h);
+    if (b && b.type === "plots") { toast("Empty plot. Nobody owns a house yet."); return; }
+    if (b) { walkTo(b.tx, b.ty); toast("Walking to " + b.name); } else walkTo(wx, wy);
+  });
+
+  /* places list */
+  const PIN = '<svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11zM12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>';
+  buildings.filter((b) => b.type !== "plots").forEach((b) => {
+    const btn = document.createElement("button");
+    btn.className = "place"; btn.innerHTML = "<i>" + PIN + "</i>";
+    btn.appendChild(document.createTextNode(b.name));
+    btn.onclick = () => { walkTo(b.tx, b.ty); toast("Walking to " + b.name); };
+    $("places").appendChild(btn);
+  });
+
+  /* ---------- drawing ---------- */
+  function wrapLabel(text, maxW) {
+    const words = text.split(" "), lines = []; let cur = "";
+    for (const w of words) { const t = cur ? cur + " " + w : w; if (ctx.measureText(t).width > maxW && cur) { lines.push(cur); cur = w; } else cur = t; }
+    lines.push(cur); return lines;
+  }
+  function drawBuilding(b) {
+    const [fill, roof] = TYPES[b.type];
+    if (b.type === "beach") { ctx.fillStyle = fill; ctx.fillRect(b.x, b.y, b.w, b.h); ctx.fillStyle = "#9FC9F3"; ctx.fillRect(b.x, b.y + b.h - 30, b.w, 30); }
+    else if (b.type === "park") { ctx.fillStyle = fill; ctx.fillRect(b.x, b.y, b.w, b.h); }
+    else if (b.type === "plots") {
+      ctx.fillStyle = fill; ctx.fillRect(b.x, b.y, b.w, b.h); ctx.strokeStyle = roof; ctx.setLineDash([8, 6]); ctx.lineWidth = 2; ctx.strokeRect(b.x + 6, b.y + 6, b.w - 12, b.h - 12); ctx.setLineDash([]);
+    } else {
+      ctx.fillStyle = "rgba(0,0,0,.12)"; ctx.fillRect(b.x + 6, b.y + 6, b.w, b.h);
+      ctx.fillStyle = fill; ctx.fillRect(b.x, b.y, b.w, b.h);
+      ctx.fillStyle = roof; ctx.fillRect(b.x, b.y, b.w, 14);
+      ctx.fillStyle = "rgba(0,0,0,.08)";
+      for (let wx = b.x + 14; wx < b.x + b.w - 20; wx += 34) for (let wy = b.y + 28; wy < b.y + b.h - 40; wy += 30) ctx.fillRect(wx, wy, 18, 14);
+      ctx.fillStyle = roof; ctx.fillRect(b.tx - 11, b.y + b.h - 22, 22, 22);
+      if (b.type === "hospital") { ctx.fillStyle = "#D9442B"; ctx.fillRect(b.x + b.w - 46, b.y + 22, 28, 8); ctx.fillRect(b.x + b.w - 36, b.y + 12, 8, 28); }
+    }
+    ctx.font = "800 13px 'Nunito Sans', Arial, sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    const lines = wrapLabel(b.name, b.w - 20), cy = b.y + b.h / 2 - ((lines.length - 1) * 8);
+    lines.forEach((l, i) => { ctx.lineWidth = 3; ctx.strokeStyle = "rgba(255,255,255,.9)"; ctx.strokeText(l, b.x + b.w / 2, cy + i * 16); ctx.fillStyle = "#17140F"; ctx.fillText(l, b.x + b.w / 2, cy + i * 16); });
+  }
+  function drawCar(c) {
+    ctx.save(); ctx.translate(c.x, c.y);
+    if (!c.horiz) ctx.rotate(Math.PI / 2);
+    if (c.dir < 0) ctx.scale(-1, 1);
+    const L = c.bus ? 46 : 36;
+    ctx.fillStyle = "rgba(0,0,0,.15)"; ctx.fillRect(-L / 2 + 2, -8, L, 18);
+    ctx.fillStyle = c.bus ? "#FFC20E" : c.col; ctx.beginPath(); ctx.roundRect(-L / 2, -9, L, 18, 5); ctx.fill();
+    if (c.bus) { ctx.fillStyle = "#17140F"; ctx.fillRect(-L / 2, -2, L, 4); }
+    ctx.fillStyle = "rgba(30,40,60,.75)"; ctx.fillRect(L / 2 - 12, -6, 7, 12);
+    ctx.restore();
+  }
+  function drawPerson(p, label) {
+    if (!p.img.complete) return;
+    const h = 34, w = h / 2, bob = p.pts && p.pts.length ? Math.sin(performance.now() / 110 + p.x) * 1.2 : 0;
+    ctx.fillStyle = "rgba(0,0,0,.18)"; ctx.beginPath(); ctx.ellipse(p.x, p.y, 8, 3, 0, 0, 7); ctx.fill();
+    ctx.drawImage(p.img, p.x - w / 2, p.y - h + bob, w, h);
+    if (label) {
+      ctx.font = "800 11px 'Nunito Sans', Arial, sans-serif"; ctx.textAlign = "center";
+      const tw = ctx.measureText(label).width + 12;
+      ctx.fillStyle = "#fff"; ctx.beginPath(); ctx.roundRect(p.x - tw / 2, p.y - h - 20, tw, 16, 6); ctx.fill();
+      ctx.fillStyle = "#17140F"; ctx.textBaseline = "middle"; ctx.fillText(label, p.x, p.y - h - 12);
+    }
+  }
+
+  function render() {
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.fillStyle = "#E6EDDC"; ctx.fillRect(0, 0, vw, vh);
+    ctx.translate(-cam.x, -cam.y);
+
+    ctx.fillStyle = "#EAF0DF"; ctx.fillRect(0, 0, W, SEA);
+    ctx.fillStyle = "#F2DFA8"; ctx.fillRect(0, SEA - 10, W, 20);
+    ctx.fillStyle = "#9FC9F3"; ctx.fillRect(0, SEA + 10, W, H - SEA);
+    ctx.fillStyle = "#8FBFEF"; for (let x = 20; x < W; x += 60) ctx.fillRect(x, SEA + 40 + (x % 120) / 4, 20, 3);
+
+    ctx.fillStyle = "#7B7B82";
+    HR.forEach((y) => ctx.fillRect(0, y - RW / 2, W, RW));
+    VR.forEach((x) => ctx.fillRect(x - RW / 2, 0, RW, SEA));
+    ctx.strokeStyle = "rgba(255,255,255,.75)"; ctx.lineWidth = 2; ctx.setLineDash([14, 12]);
+    HR.forEach((y) => { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); });
+    VR.forEach((x) => { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, SEA); ctx.stroke(); });
+    ctx.setLineDash([]);
+    ctx.strokeStyle = "rgba(255,255,255,.9)";
+    HR.forEach((cy) => VR.forEach((cx) => { for (let k = -20; k <= 20; k += 8) { ctx.beginPath(); ctx.moveTo(cx + k, cy - RW / 2 + 2); ctx.lineTo(cx + k, cy - RW / 2 + 12); ctx.stroke(); } }));
+
+    ctx.fillStyle = "#9CC58A"; trees.forEach((t) => { ctx.beginPath(); ctx.arc(t.x, t.y, t.r, 0, 7); ctx.fill(); });
+    buildings.forEach(drawBuilding);
+
+    const people = npcs.concat([me]).sort((a, b) => a.y - b.y);
+    people.forEach((p) => drawPerson(p, p === me ? "Me" : ""));
+    cars.forEach(drawCar);
+
+    if (dest) { ctx.strokeStyle = "#D9622B"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(dest.x, dest.y, 9 + Math.sin(performance.now() / 150) * 2, 0, 7); ctx.stroke(); }
+  }
+
+  /* ---------- loop ---------- */
+  function follow(e, dt) {
+    if (!e.pts.length) return;
+    const t = e.pts[0], dx = t.x - e.x, dy = t.y - e.y, d = Math.hypot(dx, dy), step = e.speed * dt;
+    if (d <= step) { e.x = t.x; e.y = t.y; e.pts.shift(); } else { e.x += dx / d * step; e.y += dy / d * step; }
+  }
+  let last = performance.now();
+  function tick(now) {
+    const dt = Math.min(.05, (now - last) / 1000); last = now;
+    follow(me, dt); if (dest && !me.pts.length) dest = null;
+    npcs.forEach((n) => {
+      if (n.pts.length) follow(n, dt);
+      else { n.wait -= dt; if (n.wait <= 0) { newNpcTarget(n); n.wait = 1 + Math.random() * 4; } }
+    });
+    cars.forEach((c) => {
+      if (c.horiz) { c.x += c.dir * c.v * dt; if (c.x > W + 40) c.x = -40; if (c.x < -40) c.x = W + 40; }
+      else { c.y += c.dir * c.v * dt; if (c.y > SEA + 20) c.y = -40; if (c.y < -40) c.y = SEA + 20; }
+    });
+    const tx = me.x - vw / 2, ty = me.y - (vh - 64) / 2;
+    cam.x = vw >= W ? (W - vw) / 2 : Math.max(0, Math.min(W - vw, tx));
+    cam.y = vh >= H ? (H - vh) / 2 : Math.max(0, Math.min(H - vh, ty));
+    render(); survival(dt);
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  /* ---------- shops, home and survival ---------- */
+  const fmt = (n) => "\u20A6" + Math.round(n).toLocaleString("en-NG");
+  const userRef = doc(db, "users", user.uid);
+  data.money = data.money || 0; data.inventory = data.inventory || {};
+  const save = (o) => updateDoc(userRef, o).catch(() => toast("Could not save. Check your connection."));
+
+  const IC = {
+    bag:'<path d="M6 8h12l1 12H5zM9 8a3 3 0 0 1 6 0"/>', chair:'<path d="M7 3h10v9H7zM5 12h14v3H5zM7 15v6M17 15v6"/>',
+    paw:'<circle cx="7" cy="10" r="2"/><circle cx="12" cy="7" r="2"/><circle cx="17" cy="10" r="2"/><path d="M8 17q4-6 8 0 0 3-4 3t-4-3z"/>',
+    food:'<path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 3c-2 2-3 5-3 8h3v10"/>', phone:'<rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/>',
+    car:'<path d="M3 15l2-6h14l2 6v4H3zM6 19v2M18 19v2M7 15h.01M17 15h.01"/>', house:'<path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/>'
+  };
+  const CARBODY = {
+    sedan:["M8 64L8 54Q8 48 16 46L52 40L72 22Q76 18 84 18L128 18Q136 18 142 24L158 40L184 46Q194 48 194 56L194 64Z","M60 40L76 25L100 25L100 40ZM106 25L128 25L146 40L106 40Z"],
+    suv:["M8 64L8 46Q8 40 16 38L44 34L56 14Q58 10 64 10L150 10Q156 10 160 16L172 36L186 40Q194 42 194 50L194 64Z","M60 32L68 17L100 17L100 32ZM106 17L148 17L160 32L106 32Z"],
+    coupe:["M8 64L8 54Q8 48 18 46L60 40L84 24Q88 20 96 20L124 20Q132 20 138 26L156 42L186 48Q194 50 194 58L194 64Z","M70 40L90 27L118 27L134 40Z"],
+    pickup:["M8 64L8 46Q8 42 14 42L40 40L56 20Q58 16 64 16L100 16Q106 16 108 22L112 40L190 40Q194 40 194 46L194 64Z","M62 38L72 22L98 22L102 38Z"],
+    van:["M8 64L8 20Q8 14 14 14L150 14Q158 14 162 20L184 44Q194 48 194 56L194 64Z","M20 22H60V40H20ZM68 22H108V40H68ZM116 22H148L162 40H116Z"],
+    hatch:["M8 64L8 52Q8 46 16 44L50 38L66 20Q70 16 76 16L130 16Q136 16 140 22L150 40L182 46Q192 48 192 56L192 64Z","M58 38L70 22L100 22L100 38ZM106 22L130 22L142 38L106 38Z"]
+  };
+  const carSVG = (t, col) => '<svg viewBox="0 0 200 90"><ellipse cx="100" cy="82" rx="88" ry="5" fill="rgba(0,0,0,.12)"/><path d="' + CARBODY[t][0] + '" fill="' + col + '"/><path d="' + CARBODY[t][1] + '" fill="#BFD9EE"/><circle cx="48" cy="66" r="15" fill="#17140F"/><circle cx="48" cy="66" r="7" fill="#C9CDD6"/><circle cx="156" cy="66" r="15" fill="#17140F"/><circle cx="156" cy="66" r="7" fill="#C9CDD6"/></svg>';
+  const houseSVG = (f, col) => { const h = f * 32, y = 108 - h; let w = ""; for (let i = 0; i < f; i++) w += '<rect x="54" y="' + (y + 8 + i * 32) + '" width="22" height="16" fill="#BFD9EE"/><rect x="124" y="' + (y + 8 + i * 32) + '" width="22" height="16" fill="#BFD9EE"/>'; return '<svg viewBox="0 0 200 120"><rect x="0" y="108" width="200" height="12" fill="#9CC58A"/><rect x="40" y="' + y + '" width="120" height="' + h + '" fill="' + col + '"/><path d="M30 ' + y + 'L100 ' + (y - 30) + 'L170 ' + y + 'Z" fill="#8B3A2B"/>' + w + '<rect x="90" y="88" width="20" height="20" fill="#5A3A22"/></svg>'; };
+
+  const CARS = [["Mercedes-Benz C300",45e6,{t:"sedan",c:"#1C1C22"}],["Mercedes-Benz GLE 450",120e6,{t:"suv",c:"#2B3A55"}],["Mercedes-Benz G63 AMG",350e6,{t:"suv",c:"#17140F"}],["Toyota Camry",28e6,{t:"sedan",c:"#C9CDD6"}],["Toyota Corolla",18e6,{t:"sedan",c:"#8B1E2D"}],["Lexus RX 350",40e6,{t:"suv",c:"#E8E4DA"}],["Range Rover Sport",95e6,{t:"suv",c:"#355E3B"}],["Honda Accord",22e6,{t:"sedan",c:"#3B6FD6"}],["Toyota Hilux",55e6,{t:"pickup",c:"#D9D9DE"}],["Toyota Hiace Bus",30e6,{t:"van",c:"#FFC20E"}],["Ford Mustang",60e6,{t:"coupe",c:"#D9442B"}],["Kia Rio",12e6,{t:"hatch",c:"#F2F0EA"}]];
+  const HOUSES = [["Self-contain, Yaba",12e6,{f:1,c:"#E9C46A"}],["2 Bedroom Flat, Surulere",35e6,{f:2,c:"#8DBF9B"}],["3 Bedroom Duplex, Lekki",120e6,{f:2,c:"#7C8BA6"}],["Mansion, Banana Island",900e6,{f:3,c:"#F4A6C8"}]];
+  const STORES = [
+    { k:"s", n:"Lekki Supermarket", ic:"bag", items:[["Rice, 50kg bag",85000],["Indomie carton",8500],["Bottled water pack",3000],["Bread loaf",1800],["Eggs crate",4500],["Vegetable oil, 25 litres",60000]] },
+    { k:"f", n:"Alaba Furniture Market", ic:"chair", items:[["Chair",25000],["Dining table",120000],["Sofa set",450000],["Bed and mattress",180000],["Wardrobe",220000],["Standing fan",45000]] },
+    { k:"p", n:"Pet World", ic:"paw", items:[["Rottweiler puppy",250000],["Cat",60000],["Parrot",90000],["Rabbit",25000],["Fish tank set",50000],["Pet food, 5kg",12000]] },
+    { k:"r", n:"Okele Spot Restaurant", ic:"food", items:[["Jollof rice and chicken",4500,{heat:.4}],["Pounded yam and egusi",5000,{heat:.5}],["Suya",3500,{heat:.3}],["Small chops",6000,{heat:.3}],["Pepper soup",4000,{heat:.6}],["Zobo drink",1200]] },
+    { k:"b", n:"Balogun Fashion", ic:"bag", items:[["Raincoat",18000,{prot:"raincoat"}],["Umbrella",7000,{prot:"umbrella"}],["Jacket",60000],["Sneakers",45000],["Wristwatch",120000]] },
+    { k:"e", n:"Computer Village", ic:"phone", items:[["Smartphone",900000],["Laptop",1200000],["Power bank",25000],["Generator",450000]] },
+    { k:"m", n:"Lagos Motors", ic:"car", kind:"car", items:CARS },
+    { k:"h", n:"Prime Realty", ic:"house", kind:"house", items:HOUSES }
+  ];
+  const byId = {};
+  STORES.forEach((s) => s.items = s.items.map((a, i) => (byId[s.k + i] = Object.assign({ id: s.k + i, n: a[0], p: a[1], kind: s.kind || "item", store: s }, a[2] || {}))));
+  const art = (it) => it.kind === "car" ? carSVG(it.t, it.c) : it.kind === "house" ? houseSVG(it.f, it.c) : '<svg class="ic" viewBox="0 0 24 24">' + IC[it.store.ic] + "</svg>";
+  const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const owned = (prot) => Object.keys(data.inventory).some((id) => data.inventory[id] > 0 && byId[id] && byId[id].prot === prot);
+
+  const panel = $("panel"); let mode = "", storeKey = "";
+  const open = (m, title) => { mode = m; $("ptitle").textContent = title; panel.hidden = false; document.querySelectorAll(".nb").forEach((b) => b.classList.toggle("on", b.dataset.nav === m)); };
+  const closePanel = () => { panel.hidden = true; mode = ""; document.querySelectorAll(".nb").forEach((b) => b.classList.toggle("on", b.dataset.nav === "map")); };
+  $("pclose").onclick = closePanel;
+
+  function cardsHTML(list) {
+    if (!list.length) return '<p style="margin-top:20px;font-weight:700;color:#6B6558">Nothing found. Try another name.</p>';
+    return '<div class="items">' + list.map((it) => {
+      const isHome = it.kind === "house" && data.home === it.id, n = data.inventory[it.id] || 0, lack = it.p - data.money;
+      const btn = isHome ? '<button disabled>Your home</button>' : lack > 0 ? '<button disabled>Need ' + fmt(lack) + " more</button>" : '<button data-buy="' + it.id + '">Buy</button>';
+      return '<div class="card"><div class="art">' + art(it) + "</div><b>" + it.n + "</b><span>" + fmt(it.p) + "</span>" + (n ? "<em>You own " + n + "</em>" : "") + btn + "</div>";
+    }).join("") + "</div>";
+  }
+  function drawBuy() {
+    const q = norm($("q") ? $("q").value : ""), res = $("res");
+    if (q) { res.innerHTML = cardsHTML(Object.values(byId).filter((it) => norm(it.n).includes(q) || norm(it.store.n).includes(q))); return; }
+    if (storeKey) { const s = STORES.find((x) => x.k === storeKey); res.innerHTML = '<button class="back" data-back>&larr; All stores</button><h3 style="margin-top:6px">' + s.n + "</h3>" + cardsHTML(s.items); return; }
+    res.innerHTML = '<div class="stores">' + STORES.map((s) => '<button class="store" data-store="' + s.k + '"><svg viewBox="0 0 24 24">' + IC[s.ic] + "</svg><div><b>" + s.n + "</b><br><small>" + s.items.length + " items</small></div></button>").join("") + "</div>";
+  }
+  function openBuy(key) {
+    storeKey = key || ""; open("buy", "Buy");
+    $("pbody").innerHTML = '<div class="srch"><input id="q" type="search" placeholder="Search cars, houses, food, pets..." autocomplete="off"></div><div id="res"></div>';
+    $("q").oninput = drawBuy; drawBuy();
+  }
+  function drawHome() {
+    const hs = data.home && byId[data.home], hrs = data.sickUntil ? Math.max(0, data.sickUntil - Date.now()) / 36e5 : 0;
+    const things = Object.keys(data.inventory).filter((id) => data.inventory[id] > 0 && byId[id]).map((id) => "<span>" + byId[id].n + " x" + data.inventory[id] + "</span>").join("") || "<span>Nothing yet</span>";
+    $("pbody").innerHTML =
+      '<div class="box"><h3>Body temperature: ' + temp.toFixed(1) + " C</h3><div class=\"gauge\"><i style=\"width:" + Math.max(0, Math.min(100, (temp - 33) / 3.6 * 100)) + "%;background:" + (temp < 35.5 ? "#D9442B" : "#27C45A") + "\"></i></div><p>" + (raining ? "It is raining." : "The sky is clear.") + (!data.home && raining ? " You have no home and you are getting wet." : "") + "</p></div>" +
+      '<div class="box"><h3>Your home</h3>' + (hs ? '<div class="art" style="height:120px">' + art(hs) + "</div><p>" + hs.n + ". Rain cannot reach you.</p>" : '<p>You do not have a home. You sleep on the street and the rain falls on you.</p><button class="go" data-realty>Find a home</button>') + "</div>" +
+      '<div class="box"><h3>Health</h3>' + (data.sickUntil ? "<p>You are sick. Go to the hospital (treatment " + fmt(COST) + "). Time left: " + Math.floor(hrs / 24) + "d " + Math.floor(hrs % 24) + 'h. If you do not get treated, you die and start again.</p><button class="go" data-hosp>Go to the hospital</button>' : "<p>You are healthy.</p>") + "</div>" +
+      '<div class="box"><h3>Your things</h3><div class="things">' + things + "</div></div>";
+  }
+  function openHome() { open("home", "Home"); drawHome(); }
+
+  $("pbody").addEventListener("click", async (e) => {
+    const t = e.target.closest("button"); if (!t) return;
+    if (t.dataset.store) { storeKey = t.dataset.store; drawBuy(); }
+    else if ("back" in t.dataset) { storeKey = ""; drawBuy(); }
+    else if (t.dataset.buy) await buy(t.dataset.buy);
+    else if ("realty" in t.dataset) openBuy("h");
+    else if ("hosp" in t.dataset) { closePanel(); const h = buildings.find((b) => b.type === "hospital"); walkTo(h.tx, h.ty); toast("Walking to the hospital"); }
+  });
+  async function buy(id) {
+    const it = byId[id];
+    if (data.money < it.p) return toast("Not enough money");
+    if (it.kind === "house" && data.home) return toast("You already own a home");
+    data.money -= it.p; const upd = { money: increment(-it.p) };
+    if (it.kind === "house") { data.home = id; upd.home = id; } else { data.inventory[id] = (data.inventory[id] || 0) + 1; upd["inventory." + id] = increment(1); }
+    if (it.heat) temp = Math.min(36.6, temp + it.heat);
+    toast("Bought " + it.n); drawBuy && ($("res") ? drawBuy() : 0); await save(upd);
+  }
+
+  /* weather, temperature, sickness, death */
+  const COST = 5000, DAY3 = 3 * 864e5;
+  let temp = 36.6, raining = false, weatherT = 20, drops = [], hudT = 0, treat = false;
+  for (let i = 0; i < 140; i++) drops.push({ x: Math.random(), y: Math.random(), l: 8 + Math.random() * 10, s: .8 + Math.random() * .6 });
+  function dialog(title, text, btns) {
+    $("dt").textContent = title; $("dp").textContent = text; $("db").innerHTML = "";
+    btns.forEach((b) => { const x = document.createElement("button"); x.className = "pbtn" + (b.dark ? " dark" : ""); x.textContent = b.label; x.onclick = () => { $("dlg").hidden = true; b.fn && b.fn(); }; $("db").appendChild(x); });
+    $("dlg").hidden = false;
+  }
+  async function die() {
+    data.money = 0; data.inventory = {}; data.home = null; data.sickUntil = null; temp = 36.6; raining = false;
+    me.pts = []; me.x = airport.tx; me.y = airport.ty; dest = null;
+    await save({ money: 0, inventory: {}, home: null, sickUntil: null, deaths: increment(1) });
+    dialog("You died", "You were not treated in time. You are reborn at the airport with nothing. Your followers stay with you.", [{ label: "Start again", dark: true }]);
+  }
+  function survival(dt) {
+    weatherT -= dt; if (weatherT <= 0) { raining = !raining; weatherT = raining ? 30 + Math.random() * 40 : 40 + Math.random() * 60; }
+    const prot = owned("raincoat") ? 0 : owned("umbrella") ? .5 : 1;
+    if (raining && !data.home) temp = Math.max(33, temp - .045 * prot * dt); else temp = Math.min(36.6, temp + .03 * dt);
+    const now = Date.now();
+    if (temp < 35 && !data.sickUntil) { data.sickUntil = now + DAY3; save({ sickUntil: data.sickUntil }); toast("You are sick. Get to the hospital."); }
+    if (data.sickUntil && now > data.sickUntil) die();
+    const h = buildings.find((b) => b.type === "hospital"), near = Math.hypot(me.x - h.tx, me.y - h.ty) < 40;
+    if (!near) treat = false;
+    if (data.sickUntil && near && !me.pts.length && !treat && $("dlg").hidden) {
+      treat = true;
+      if (data.money >= COST) dialog("Hospital", "Treatment costs " + fmt(COST) + ". Pay now?", [{ label: "Pay " + fmt(COST), dark: true, fn: () => { data.money -= COST; data.sickUntil = null; temp = 36.6; save({ money: increment(-COST), sickUntil: null }); toast("You are well again"); } }, { label: "Not now" }]);
+      else dialog("Hospital", "Treatment costs " + fmt(COST) + " and you have " + fmt(data.money) + ". Raise the money before your time runs out.", [{ label: "OK", dark: true }]);
+    }
+    /* rain overlay */
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (raining) {
+      ctx.fillStyle = "rgba(25,45,80,.22)"; ctx.fillRect(0, 0, vw, vh);
+      ctx.strokeStyle = "rgba(200,220,255,.7)"; ctx.lineWidth = 1.2; ctx.beginPath();
+      drops.forEach((d) => { d.y += d.s * dt * 1.4; d.x -= dt * .1; if (d.y > 1) { d.y = 0; d.x = Math.random() * 1.2; } const x = d.x * vw, y = d.y * vh; ctx.moveTo(x, y); ctx.lineTo(x - 3, y + d.l); });
+      ctx.stroke();
+    }
+    hudT -= dt;
+    if (hudT <= 0) {
+      hudT = .5;
+      $("hud").innerHTML = "<span>" + fmt(data.money) + "</span><span class=\"" + (temp < 35.5 ? "bad" : "") + "\">" + temp.toFixed(1) + " C</span>" + (raining ? '<span class="rain">Raining</span>' : "") + (data.sickUntil ? '<span class="bad">Sick</span>' : "");
+      if (mode === "home") drawHome();
+    }
+  }
+
+  /* ---------- navigation ---------- */
+  document.querySelectorAll(".nb").forEach((b) => b.addEventListener("click", () => {
+    const k = b.dataset.nav;
+    if (k === "map") { closePanel(); return; }
+    if (k === "me") { go("me.html"); return; }
+    if (k === "buy") { openBuy(); return; }
+    if (k === "home") { openHome(); return; }
+    if (k === "phone") { go("phone.html"); return; }
+    toast(k.charAt(0).toUpperCase() + k.slice(1) + " is coming next");
+  }));
+  const wantOpen = new URLSearchParams(window.__Q).get("open");
+  if (wantOpen === "buy") openBuy(); if (wantOpen === "home") openHome();
+  $("meAv").innerHTML = avatarSVG(data.avatar);
+  $("meName").textContent = data.name || user.displayName || "You";
+  $("meUser").textContent = data.username ? "@" + data.username : "";
+  $("closeMe").onclick = () => { $("meModal").hidden = true; };
+  $("logout").onclick = async () => { await signOut(auth); go("index.html",true); };
+}
+<\/script>
+</body>
+</html>
+</script>
+<script type="text/plain" data-page="me"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Me | Lapo Baby</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#17140F; --danfo:#FFC20E; --nav-h:64px; }
+  * { box-sizing:border-box; margin:0; -webkit-tap-highlight-color:transparent; }
+  body { font-family:"Avenir Next","Nunito Sans",system-ui,sans-serif; color:var(--ink); background:#fff; padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom,0px) + 20px); }
+  button, a { font:inherit; color:inherit; }
+  button:focus-visible, a:focus-visible { outline:3px solid var(--danfo); outline-offset:2px; }
+
+  .hero { background:linear-gradient(#9A7414,#4A3A10 55%,#17140F); color:#fff; padding:calc(14px + env(safe-area-inset-top,0px)) 16px 16px; }
+  .bar { display:flex; justify-content:space-between; }
+  .rb { width:40px; height:40px; border-radius:50%; border:0; background:rgba(0,0,0,.35); display:grid; place-items:center; cursor:pointer; text-decoration:none; }
+  .rb svg { width:20px; height:20px; fill:none; stroke:#fff; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+  .who { display:flex; align-items:center; gap:14px; margin-top:64px; }
+  .face { position:relative; width:76px; height:76px; border-radius:50%; background:#F4C9A8; overflow:visible; flex:none; }
+  .face svg { width:100%; height:100%; border-radius:50%; display:block; }
+  .face i { position:absolute; right:2px; bottom:2px; width:14px; height:14px; border-radius:50%; background:#27C45A; border:2px solid #fff; }
+  .who h1 { font-size:24px; font-weight:800; line-height:1.1; }
+  .who p { font-size:14px; font-weight:600; opacity:.8; margin-top:3px; }
+  .row { display:flex; gap:10px; margin-top:16px; }
+  .up { flex:1; height:46px; border:0; border-radius:999px; background:var(--danfo); color:var(--ink); font-weight:800; font-size:16px; cursor:pointer; }
+  .cur { width:72px; height:46px; border:0; border-radius:999px; background:rgba(255,255,255,.2); color:#fff; font-weight:800; font-size:16px; cursor:pointer; }
+
+  .balance { margin:14px 16px 0; padding:14px 16px; background:#F6F2E6; border-radius:16px; }
+  .balance small { font-weight:700; font-size:12px; color:#6B6558; }
+  .balance b { display:block; font-size:28px; font-weight:800; margin-top:2px; word-break:break-all; }
+  .balance span { font-size:12px; font-weight:600; color:#6B6558; }
+
+  .tabs { display:grid; grid-template-columns:repeat(3,1fr); margin-top:12px; border-bottom:1px solid #E6E2D8; }
+  .tab { height:46px; border:0; background:none; font-weight:700; font-size:15px; color:#8A8578; border-bottom:3px solid transparent; cursor:pointer; }
+  .tab[aria-selected="true"] { color:var(--ink); border-color:var(--ink); }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; padding-top:3px; }
+  .tile { position:relative; aspect-ratio:9/16; background:#EEE9DA; border:0; padding:0; overflow:hidden; cursor:pointer; }
+  .tile img, .tile video { width:100%; height:100%; object-fit:cover; display:block; }
+  .tile .pl { position:absolute; left:6px; bottom:6px; width:22px; height:22px; border-radius:50%; background:rgba(0,0,0,.55); display:grid; place-items:center; }
+  .tile .pl svg { width:10px; height:10px; fill:#fff; }
+  .empty { padding:40px 24px; text-align:center; color:#6B6558; font-weight:600; font-size:14px; grid-column:1/-1; }
+
+  table { width:calc(100% - 32px); margin:14px 16px; border-collapse:collapse; font-size:14px; }
+  th, td { padding:10px 6px; text-align:right; border-bottom:1px solid #EEE9DA; }
+  th:first-child, td:first-child { text-align:left; font-weight:700; }
+  th { font-size:12px; color:#6B6558; }
+  tfoot td { font-weight:800; border-bottom:0; }
+  .note { margin:0 16px; font-size:12.5px; color:#6B6558; font-weight:600; }
+
+  nav { position:fixed; z-index:20; left:0; right:0; bottom:0; height:calc(var(--nav-h) + env(safe-area-inset-bottom,0px)); padding-bottom:env(safe-area-inset-bottom,0px); background:#fff; border-top:1px solid #E6E2D8; display:grid; grid-template-columns:repeat(5,1fr); }
+  .nb { border:0; background:none; text-decoration:none; font-size:12px; font-weight:700; color:#6B6558; height:var(--nav-h); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; cursor:pointer; }
+  .nb svg { width:26px; height:26px; fill:none; stroke:currentColor; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; }
+  .nb.on { color:var(--ink); } .nb.on svg { fill:var(--ink); }
+  .nb.live svg { width:42px; height:36px; } .nb.live .tv { fill:var(--danfo); stroke:var(--ink); }
+
+  #toast { position:fixed; z-index:40; left:50%; bottom:calc(var(--nav-h) + env(safe-area-inset-bottom,0px) + 14px); transform:translateX(-50%); background:var(--ink); color:#fff; padding:10px 16px; border-radius:999px; font-weight:700; font-size:14px; opacity:0; pointer-events:none; transition:opacity .2s; max-width:90vw; text-align:center; }
+  #toast.show { opacity:1; }
+  .viewer { position:fixed; z-index:50; inset:0; background:#000; display:flex; align-items:center; justify-content:center; }
+  .viewer[hidden] { display:none; }
+  .viewer img, .viewer video { max-width:100%; max-height:100%; }
+  .viewer button { position:absolute; top:calc(14px + env(safe-area-inset-top,0px)); left:14px; }
+  .menu { position:fixed; z-index:45; right:16px; top:calc(62px + env(safe-area-inset-top,0px)); background:#fff; color:var(--ink); border-radius:14px; box-shadow:0 6px 24px rgba(0,0,0,.25); overflow:hidden; }
+  .menu[hidden] { display:none; }
+  .menu button { display:block; width:100%; padding:14px 22px; border:0; background:none; font-weight:700; text-align:left; cursor:pointer; }
+  #loading { position:fixed; z-index:60; inset:0; background:var(--danfo); display:grid; place-items:center; font-weight:800; font-size:20px; }
+  nav { grid-template-columns:repeat(7,1fr); } .nb { font-size:10.5px; } .nb svg { width:23px; height:23px; } .nb.live svg { width:38px; height:32px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="bar">
+    <a class="rb" href="city.html" aria-label="Back to the city"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></a>
+    <button class="rb" id="more" aria-label="More"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1" fill="#fff"/><circle cx="12" cy="12" r="1" fill="#fff"/><circle cx="19" cy="12" r="1" fill="#fff"/></svg></button>
+  </div>
+  <div class="who">
+    <div class="face" id="face"><i></i></div>
+    <div><h1 id="name"></h1><p id="meta"></p></div>
+  </div>
+  <div class="row">
+    <button class="up" id="upload">Upload photo or video</button>
+    <button class="cur" id="cur" aria-label="Switch currency"></button>
+  </div>
+  <input type="file" id="file" accept="image/*,video/*" multiple hidden>
+</header>
+
+<div class="menu" id="menu" hidden><button id="logout">Log out</button></div>
+
+<section class="balance">
+  <small>BALANCE</small>
+  <b id="bal"></b>
+  <span id="rate"></span>
+</section>
+
+<div class="tabs" role="tablist">
+  <button class="tab" role="tab" data-t="photos" aria-selected="true">Photos</button>
+  <button class="tab" role="tab" data-t="videos" aria-selected="false">Videos</button>
+  <button class="tab" role="tab" data-t="earn" aria-selected="false">Earnings</button>
+</div>
+<div id="content"></div>
+
+<nav aria-label="Main">
+  <a class="nb" href="city.html"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Map</a>
+  <a class="nb" href="city.html?open=buy"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM5 14v6h14v-6"/></svg>Buy</a>
+  <a class="nb" href="city.html?open=home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/></svg>Home</a>
+  <button class="nb live" data-soon="Live" aria-label="Live"><svg viewBox="0 0 44 36"><path d="M16 5l6 5 6-5" stroke-width="2"/><rect class="tv" x="3" y="9" width="38" height="24" rx="6" stroke-width="2"/><text x="22" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#17140F" stroke="none" font-family="Nunito Sans,Arial,sans-serif">LIVE</text></svg></button>
+  <a class="nb" href="phone.html"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg>Phone</a>
+  <button class="nb" data-soon="Earn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 8l3 4 3-4M9 12h6M9 15h6M12 12v6"/></svg>Earn</button>
+  <a class="nb on" href="me.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></svg>Me</a>
+</nav>
+
+<div id="toast" role="status"></div>
+<div class="viewer" id="viewer" hidden><button class="rb" id="closeV" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button><div id="vbox"></div></div>
+<div id="loading">Loading your profile...</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import { getFirestore, doc, getDoc, updateDoc, collection, addDoc, getDocs, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-storage.js";
+
+const app = initializeApp({
+  apiKey: "AIzaSyC42fUKbNURnKeZR5KLjrAk9StZSbaUB9g",
+  authDomain: "repaid-edef4.firebaseapp.com",
+  projectId: "repaid-edef4",
+  storageBucket: "repaid-edef4.firebasestorage.app",
+  messagingSenderId: "514373962526",
+  appId: "1:514373962526:web:244c032e8b3b3b0002570f",
+  measurementId: "G-2HL2M9MEH7"
+});
+const auth = getAuth(app), db = getFirestore(app), storage = getStorage(app);
+
+/* ---- avatar drawing (same as the creator and the city) ---- */
+const DEFAULT = { body:"man", skin:"#8D5A3B", hairStyle:"short", hairColor:"#1B1210", beard:"none", topStyle:"long", top:"#FFFFFF", bottomStyle:"pants", bottom:"#4D6A96", shoes:"#E8E8EC", hat:"none" };
+function avatarSVG(cfg) {
+  const c = Object.assign({}, DEFAULT, cfg || {}), w = c.body === "woman", tx = w ? 33 : 30, tw = w ? 34 : 40;
+  let s = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 200">';
+  if (c.hairStyle === "afro") s += `<circle cx="50" cy="24" r="25" fill="${c.hairColor}"/>`;
+  if (c.hairStyle === "long") s += `<path d="M32 36q-4-27 18-27t18 27l3 44h-11V50H40v30H29z" fill="${c.hairColor}"/>`;
+  s += `<ellipse cx="41" cy="192" rx="10" ry="5" fill="${c.shoes}"/><ellipse cx="59" cy="192" rx="10" ry="5" fill="${c.shoes}"/>`;
+  if (c.bottomStyle === "skirt") { s += `<rect x="38" y="140" width="9" height="50" rx="4" fill="${c.skin}"/><rect x="53" y="140" width="9" height="50" rx="4" fill="${c.skin}"/><path d="M${tx-1} 112h${tw+2}l8 40H${tx-9}z" fill="${c.bottom}"/>`; }
+  else { s += `<rect x="36" y="110" width="13" height="80" rx="5" fill="${c.bottom}"/><rect x="51" y="110" width="13" height="80" rx="5" fill="${c.bottom}"/><rect x="${tx}" y="104" width="${tw}" height="16" fill="${c.bottom}"/>`; }
+  if (c.topStyle === "long") s += `<rect x="${tx-11}" y="64" width="11" height="50" rx="5" fill="${c.top}"/><rect x="${tx+tw}" y="64" width="11" height="50" rx="5" fill="${c.top}"/>`;
+  else s += `<rect x="${tx-9}" y="66" width="9" height="46" rx="4" fill="${c.skin}"/><rect x="${tx+tw}" y="66" width="9" height="46" rx="4" fill="${c.skin}"/><rect x="${tx-11}" y="64" width="11" height="20" rx="5" fill="${c.top}"/><rect x="${tx+tw}" y="64" width="11" height="20" rx="5" fill="${c.top}"/>`;
+  s += `<circle cx="${tx-5}" cy="117" r="5.5" fill="${c.skin}"/><circle cx="${tx+tw+5}" cy="117" r="5.5" fill="${c.skin}"/>`;
+  s += `<path d="M${tx} 68q0-8 9-10h${tw-18}q9 2 9 10v50H${tx}z" fill="${c.top}"/><rect x="45" y="50" width="10" height="12" fill="${c.skin}"/>`;
+  s += `<circle cx="34" cy="38" r="4" fill="${c.skin}"/><circle cx="66" cy="38" r="4" fill="${c.skin}"/><ellipse cx="50" cy="36" rx="16" ry="19" fill="${c.skin}"/>`;
+  s += `<ellipse cx="43" cy="37" rx="3.4" ry="2.4" fill="#fff"/><ellipse cx="57" cy="37" rx="3.4" ry="2.4" fill="#fff"/><circle cx="43.6" cy="37" r="1.7" fill="#1B1210"/><circle cx="57.6" cy="37" r="1.7" fill="#1B1210"/>`;
+  s += `<path d="M39 32q4-3 8 0M53 32q4-3 8 0" stroke="#1B1210" stroke-width="1.6" fill="none" stroke-linecap="round"/>`;
+  if (w) s += `<path d="M39.5 35.5l-2-1.2M60.5 35.5l2-1.2" stroke="#1B1210" stroke-width="1.2" stroke-linecap="round"/>`;
+  s += `<path d="M48 42q2 2 4 0" stroke="rgba(0,0,0,.25)" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M45 47q5 3 10 0" stroke="#6B2F25" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
+  if (c.beard === "goatee") s += `<path d="M43 44q7-3 14 0q-7 2-14 0z" fill="${c.hairColor}"/><path d="M44 49q6 10 12 0q-6 2-12 0z" fill="${c.hairColor}"/>`;
+  if (c.beard === "full") s += `<path d="M34 38q0 26 16 26t16-26q-3 14-16 14T34 38z" fill="${c.hairColor}"/><path d="M43 44q7-3 14 0q-7 2-14 0z" fill="${c.hairColor}"/>`;
+  if (["short","bun","long"].includes(c.hairStyle)) s += `<path d="M34 34q0-21 16-21t16 21q-6-9-16-9t-16 9z" fill="${c.hairColor}"/>`;
+  if (c.hairStyle === "bun") s += `<circle cx="50" cy="9" r="7" fill="${c.hairColor}"/>`;
+  if (c.hat === "beanie") s += `<path d="M33 31q0-21 17-21t17 21z" fill="#3B6FD6"/><rect x="32" y="28" width="36" height="7" rx="3" fill="#2F58AE"/>`;
+  if (c.hat === "cap") s += `<path d="M34 31q0-19 16-19t16 19z" fill="#D9442B"/><path d="M32 31h34q9 0 12 5H32z" fill="#A83320"/>`;
+  if (c.hat === "fur") s += `<path d="M25 44q-4-34 25-34t25 34q-3-10-7-16-14-9-36 0-4 6-7 16z" fill="#7A5636"/><ellipse cx="29" cy="46" rx="6" ry="13" fill="#6A4A2E"/><ellipse cx="71" cy="46" rx="6" ry="13" fill="#6A4A2E"/>`;
+  return s + "</svg>";
+}
+const faceSVG = (cfg) => avatarSVG(cfg).replace('viewBox="0 0 100 200"', 'viewBox="20 -6 60 60"');
+
+/* ---- earning rates, in naira ---- */
+const RATES = { follower: 0.001, view: 0.0001, like: 0.0001, comment: 0.0001, share: 0.0001 };
+let ngnPerUsd = 1500;
+
+const $ = (id) => document.getElementById(id);
+function toast(t) { const el = $("toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("show"), 2200); }
+
+let user, me, posts = [], tab = "photos";
+const isUsd = () => me.currency === "USD";
+const conv = (ngn) => isUsd() ? ngn / ngnPerUsd : ngn;
+const money = (ngn) => (isUsd() ? "$" : "\u20A6") + conv(ngn).toFixed(isUsd() ? 8 : 4);
+
+function totals() {
+  const t = { follower: me.followers || 0, view: 0, like: 0, comment: 0, share: 0 };
+  posts.forEach((p) => { t.view += p.views || 0; t.like += p.likes || 0; t.comment += p.comments || 0; t.share += p.shares || 0; });
+  return t;
+}
+function render() {
+  const t = totals();
+  let total = 0; for (const k in t) total += t[k] * RATES[k];
+  $("bal").textContent = money(total);
+  $("rate").textContent = isUsd() ? "$1 = \u20A6" + ngnPerUsd.toFixed(0) : "Paid in naira";
+  $("cur").textContent = isUsd() ? "$" : "\u20A6";
+  $("meta").textContent = (me.username ? "@" + me.username + " \u00B7 " : "") + t.follower + " follower" + (t.follower === 1 ? "" : "s");
+  document.querySelectorAll(".tab").forEach((b) => b.setAttribute("aria-selected", b.dataset.t === tab));
+  const c = $("content");
+  if (tab === "earn") {
+    const rows = [["Followers", t.follower, RATES.follower], ["Views", t.view, RATES.view], ["Likes", t.like, RATES.like], ["Comments", t.comment, RATES.comment], ["Shares", t.share, RATES.share]];
+    c.innerHTML = '<table><thead><tr><th></th><th>Count</th><th>Each</th><th>Earned</th></tr></thead><tbody>' +
+      rows.map((r) => `<tr><td>${r[0]}</td><td>${r[1]}</td><td>${money(r[2])}</td><td>${money(r[1] * r[2])}</td></tr>`).join("") +
+      `</tbody><tfoot><tr><td colspan="3">Total</td><td>${money(total)}</td></tr></tfoot></table>` +
+      '<p class="note">You earn for every follower, view, like, comment and share on your posts.</p>';
+    return;
+  }
+  const list = posts.filter((p) => tab === "photos" ? p.type === "image" : p.type === "video");
+  c.innerHTML = '<div class="grid"></div>';
+  const g = c.firstChild;
+  if (!list.length) { g.innerHTML = '<p class="empty">Nothing here yet. Tap Upload to add your first ' + (tab === "photos" ? "photo" : "video") + '.</p>'; return; }
+  list.forEach((p) => {
+    const b = document.createElement("button"); b.className = "tile";
+    b.innerHTML = p.type === "image" ? `<img src="${p.url}" alt="">` : `<video src="${p.url}#t=0.1" muted preload="metadata" playsinline></video><span class="pl"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>`;
+    b.onclick = () => { $("vbox").innerHTML = p.type === "image" ? `<img src="${p.url}" alt="">` : `<video src="${p.url}" controls autoplay playsinline></video>`; $("viewer").hidden = false; };
+    g.appendChild(b);
+  });
+}
+
+async function loadPosts() {
+  try {
+    const s = await getDocs(query(collection(db, "users", user.uid, "posts"), orderBy("createdAt", "desc")));
+    posts = s.docs.map((d) => Object.assign({ id: d.id }, d.data()));
+  } catch (e) { posts = []; }
+  render();
+}
+
+onAuthStateChanged(auth, async (u) => {
+  if (!u) { go("login.html?mode=login",true); return; }
+  user = u;
+  try { const s = await getDoc(doc(db, "users", u.uid)); if (s.exists()) me = s.data(); } catch (e) {}
+  if (!me || !me.avatar) { go("avatar.html",true); return; }
+  if (!me.currency) me.currency = "NGN";
+  $("loading").remove();
+  $("name").textContent = me.name || u.displayName || "You";
+  $("face").insertAdjacentHTML("afterbegin", faceSVG(me.avatar));
+  fetch("https://open.er-api.com/v6/latest/USD").then((r) => r.json()).then((j) => { if (j && j.rates && j.rates.NGN) { ngnPerUsd = j.rates.NGN; render(); } }).catch(() => {});
+  render(); loadPosts();
+});
+
+/* ---- actions ---- */
+document.querySelectorAll(".tab").forEach((b) => b.onclick = () => { tab = b.dataset.t; render(); });
+$("cur").onclick = async () => {
+  me.currency = isUsd() ? "NGN" : "USD"; render();
+  try { await updateDoc(doc(db, "users", user.uid), { currency: me.currency }); } catch (e) { toast("Could not save your currency"); }
+};
+$("upload").onclick = () => $("file").click();
+$("file").onchange = async (e) => {
+  for (const f of e.target.files) {
+    const type = f.type.startsWith("video") ? "video" : f.type.startsWith("image") ? "image" : null;
+    if (!type) { toast("Only photos and videos"); continue; }
+    if (f.size > 100 * 1024 * 1024) { toast("Max file size is 100 MB"); continue; }
+    const path = "posts/" + user.uid + "/" + Date.now() + "-" + f.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+    try {
+      const task = uploadBytesResumable(ref(storage, path), f);
+      await new Promise((ok, no) => { task.on("state_changed", (s) => toast("Uploading " + Math.round(s.bytesTransferred / s.totalBytes * 100) + "%"), no, ok); });
+      const url = await getDownloadURL(task.snapshot.ref);
+      await addDoc(collection(db, "users", user.uid, "posts"), { type, url, path, views: 0, likes: 0, comments: 0, shares: 0, createdAt: serverTimestamp() });
+      toast("Uploaded");
+      tab = type === "image" ? "photos" : "videos";
+    } catch (err) { toast("Upload failed. Check Firebase Storage is on and its rules are set."); }
+  }
+  e.target.value = ""; loadPosts();
+};
+$("closeV").onclick = () => { $("viewer").hidden = true; $("vbox").innerHTML = ""; };
+$("more").onclick = () => { $("menu").hidden = !$("menu").hidden; };
+$("logout").onclick = async () => { await signOut(auth); go("index.html",true); };
+document.querySelectorAll("[data-soon]").forEach((b) => b.onclick = () => toast(b.dataset.soon + " is coming next"));
+<\/script>
+</body>
+</html>
+</script>
+<script type="text/plain" data-page="phone"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Phone | Lapo Baby</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#17140F; --danfo:#FFC20E; --nav-h:64px; }
+  * { box-sizing:border-box; margin:0; -webkit-tap-highlight-color:transparent; }
+  html, body { height:100%; overflow:hidden; }
+  body { font-family:-apple-system,"SF Pro Text","Nunito Sans",system-ui,sans-serif; color:var(--ink); background:linear-gradient(#FAC8F2,#E3B9F7 35%,#B9A6EE 75%,#A99BE8); }
+  button { font:inherit; color:inherit; }
+  .screen { position:fixed; inset:0 0 calc(var(--nav-h) + env(safe-area-inset-bottom,0px)) 0; padding-top:env(safe-area-inset-top,0px); }
+  .status { position:relative; height:56px; display:flex; align-items:center; justify-content:space-between; padding:0 30px; color:#fff; font-weight:600; font-size:17px; }
+  .island { position:absolute; left:50%; top:10px; transform:translateX(-50%); width:122px; height:36px; border-radius:20px; background:#000; }
+  .island::after { content:""; position:absolute; right:22px; top:14px; width:8px; height:8px; border-radius:50%; background:#F5A31A; }
+  .sr { display:flex; align-items:center; gap:7px; }
+  .bars { display:flex; align-items:flex-end; gap:2px; height:13px; } .bars i { width:4px; background:#fff; border-radius:1px; }
+  .batt { background:#fff; color:#7B6BD0; border-radius:7px; padding:1px 7px; font-size:14px; font-weight:800; }
+  .hello { text-align:center; margin:22px 0 6px; color:#fff; font-weight:700; font-size:15px; opacity:.9; }
+  .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px 8px; padding:18px 18px; }
+  .app { border:0; background:none; display:flex; flex-direction:column; align-items:center; gap:7px; cursor:pointer; position:relative; }
+  .ic { width:62px; height:62px; border-radius:16px; display:grid; place-items:center; box-shadow:0 3px 8px rgba(60,30,110,.25); }
+  .ic svg { width:32px; height:32px; fill:none; stroke:#fff; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+  .app span.l { color:#fff; font-size:12.5px; font-weight:600; text-shadow:0 1px 3px rgba(0,0,0,.25); }
+  .bd { position:absolute; top:-6px; right:4px; min-width:22px; height:22px; border-radius:11px; background:#FF3B30; color:#fff; font-size:13px; font-weight:800; display:grid; place-items:center; padding:0 6px; }
+  .bank { position:fixed; z-index:20; inset:0 0 calc(var(--nav-h) + env(safe-area-inset-bottom,0px)) 0; background:#F4F1FA; padding:calc(env(safe-area-inset-top,0px) + 16px) 16px; overflow-y:auto; }
+  .bank[hidden] { display:none; }
+  .bank h2 { font-size:24px; font-weight:800; margin:6px 0 14px; }
+  .card { background:linear-gradient(135deg,#17140F,#3C3358); color:#fff; border-radius:20px; padding:20px; }
+  .card small { opacity:.7; font-weight:700; } .card b { display:block; font-size:32px; margin-top:4px; }
+  .bank p { margin-top:14px; font-weight:600; color:#5C5470; font-size:14px; }
+  .x { border:0; background:#E6E0F3; border-radius:999px; height:38px; padding:0 16px; font-weight:800; cursor:pointer; }
+  nav { position:fixed; z-index:20; left:0; right:0; bottom:0; height:calc(var(--nav-h) + env(safe-area-inset-bottom,0px)); padding-bottom:env(safe-area-inset-bottom,0px); background:#fff; border-top:1px solid #E6E2D8; display:grid; grid-template-columns:repeat(7,1fr); }
+  .nb { border:0; background:none; text-decoration:none; font-size:10.5px; font-weight:700; color:#6B6558; height:var(--nav-h); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; cursor:pointer; }
+  .nb svg { width:23px; height:23px; fill:none; stroke:currentColor; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; }
+  .nb.on { color:#17140F; } .nb.on svg { fill:#17140F; }
+  .nb.live svg { width:38px; height:32px; } .nb.live .tv { fill:#FFC20E; stroke:#17140F; }
+  #toast { position:fixed; z-index:60; left:50%; bottom:calc(var(--nav-h) + env(safe-area-inset-bottom,0px) + 14px); transform:translateX(-50%); background:var(--ink); color:#fff; padding:10px 16px; border-radius:999px; font-weight:700; font-size:14px; opacity:0; pointer-events:none; transition:opacity .2s; white-space:nowrap; }
+  #toast.show { opacity:1; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="status">
+    <span id="clock"></span>
+    <div class="island"></div>
+    <span class="sr"><span class="bars"><i style="height:5px"></i><i style="height:8px"></i><i style="height:11px"></i><i style="height:13px"></i></span><span class="batt" id="batt" hidden></span></span>
+  </div>
+  <p class="hello" id="hello"></p>
+  <div class="grid" id="grid"></div>
+</div>
+
+<section class="bank" id="bank" hidden>
+  <button class="x" id="bx">Close</button>
+  <h2>Bank</h2>
+  <div class="card"><small>WALLET BALANCE</small><b id="bal"></b></div>
+  <p>Deposits from your real bank account to buy coins will be added soon.</p>
+</section>
+<nav aria-label="Main"><a class="nb" href="city.html"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Map</a><a class="nb" href="city.html?open=buy"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM5 14v6h14v-6"/></svg>Buy</a><a class="nb" href="city.html?open=home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/></svg>Home</a><button class="nb live" data-soon="Live" aria-label="Live"><svg viewBox="0 0 44 36"><path d="M16 5l6 5 6-5" stroke-width="2"/><rect class="tv" x="3" y="9" width="38" height="24" rx="6" stroke-width="2"/><text x="22" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#17140F" stroke="none" font-family="Nunito Sans,Arial,sans-serif">LIVE</text></svg></button><a class="nb on" href="phone.html"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg>Phone</a><button class="nb" data-soon="Earn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 8l3 4 3-4M9 12h6M9 15h6M12 12v6"/></svg>Earn</button><a class="nb" href="me.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></svg>Me</a></nav>
+<div id="toast" role="status"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import { getFirestore, doc, getDoc, collection, query, where, onSnapshot } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey: "AIzaSyC42fUKbNURnKeZR5KLjrAk9StZSbaUB9g", authDomain: "repaid-edef4.firebaseapp.com", projectId: "repaid-edef4",
+  storageBucket: "repaid-edef4.firebasestorage.app", messagingSenderId: "514373962526", appId: "1:514373962526:web:244c032e8b3b3b0002570f"
+});
+const auth = getAuth(app), db = getFirestore(app);
+const $ = (id) => document.getElementById(id);
+function toast(t) { const el = $("toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("show"), 1800); }
+document.querySelectorAll("[data-soon]").forEach((b) => b.onclick = () => toast(b.dataset.soon + " is coming next"));
+
+const tick = () => { $("clock").textContent = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: false }); };
+tick(); setInterval(tick, 15000);
+if (navigator.getBattery) navigator.getBattery().then((b) => { const f = () => { $("batt").textContent = Math.round(b.level * 100); $("batt").hidden = false; }; f(); b.onlevelchange = f; });
+
+const APPS = [
+  ["chat", "Chat", "linear-gradient(#F78FD0,#D7459B)", '<path d="M4 5h16v11H9l-5 4z"/>'],
+  ["bank", "Bank", "linear-gradient(#4CC38A,#1B7A4E)", '<path d="M3 10l9-6 9 6M5 10v8M10 10v8M14 10v8M19 10v8M3 20h18"/>'],
+  ["invest", "Invest", "linear-gradient(#6C8CF0,#2F4FC2)", '<path d="M3 17l6-6 4 4 8-8M15 7h6v6"/>'],
+  ["music", "Music", "linear-gradient(#FF7A59,#D9442B)", '<path d="M9 18V6l11-2v12M9 18a3 3 0 1 1-3-3M20 16a3 3 0 1 1-3-3"/>'],
+  ["bet", "Betting", "linear-gradient(#FFD34E,#E59A00)", '<rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1" fill="#fff"/><circle cx="15" cy="15" r="1" fill="#fff"/><circle cx="12" cy="12" r="1" fill="#fff"/>']
+];
+$("grid").innerHTML = APPS.map((a) => '<button class="app" data-app="' + a[0] + '"><span class="ic" style="background:' + a[2] + '"><svg viewBox="0 0 24 24">' + a[3] + '</svg></span><span class="l">' + a[1] + '</span></button>').join("");
+$("grid").onclick = (e) => {
+  const b = e.target.closest(".app"); if (!b) return; const k = b.dataset.app;
+  if (k === "chat") go("chat.html"); else if (k === "bank") $("bank").hidden = false; else toast(b.querySelector(".l").textContent + " is coming next");
+};
+$("bx").onclick = () => { $("bank").hidden = true; };
+
+onAuthStateChanged(auth, async (u) => {
+  if (!u) { go("login.html?mode=login",true); return; }
+  try {
+    const s = await getDoc(doc(db, "users", u.uid)), d = s.exists() ? s.data() : null;
+    if (!d || !d.avatar) { go("avatar.html",true); return; }
+    $("hello").textContent = "Hi, " + (d.name || "there");
+    $("bal").textContent = "\u20A6" + Math.round(d.money || 0).toLocaleString("en-NG");
+  } catch (e) {}
+  onSnapshot(query(collection(db, "chats"), where("members", "array-contains", u.uid)), (s) => {
+    const n = s.docs.filter((x) => { const c = x.data(); return c.lastFrom && c.lastFrom !== u.uid && ((c.seen && c.seen[u.uid]) || 0) < c.lastAt; }).length;
+    const old = document.querySelector('[data-app="chat"] .bd'); if (old) old.remove();
+    if (n) document.querySelector('[data-app="chat"]').insertAdjacentHTML("beforeend", '<span class="bd">' + n + "</span>");
+  });
+});
+<\/script>
+</body>
+</html>
+</script>
+<script type="text/plain" data-page="chat"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chat | Lapo Baby</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#17140F; --plum:#5A0F4A; --pink:#F4B6DE; --pink2:#EE8FCB; --danfo:#FFC20E; --nav-h:64px; }
+  * { box-sizing:border-box; margin:0; -webkit-tap-highlight-color:transparent; }
+  html, body { height:100%; overflow:hidden; }
+  body { font-family:"Avenir Next","Nunito Sans",system-ui,sans-serif; color:var(--ink); background:var(--pink); }
+  button, input { font:inherit; color:inherit; }
+  button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid var(--plum); outline-offset:2px; }
+  .bg { position:fixed; inset:0; background:linear-gradient(#F6BFE3,#F1A6D5); }
+  .bg svg { position:absolute; left:-20%; width:140%; top:18%; opacity:.5; }
+  .list { position:fixed; inset:0 0 calc(var(--nav-h) + env(safe-area-inset-bottom,0px)) 0; display:flex; flex-direction:column; }
+  .top { display:flex; align-items:center; gap:10px; padding:calc(10px + env(safe-area-inset-top,0px)) 12px 6px; }
+  .top h1 { flex:1; text-align:center; font-size:22px; font-weight:800; }
+  .rc { width:44px; height:44px; border-radius:50%; border:0; background:var(--pink2); display:grid; place-items:center; cursor:pointer; flex:none; overflow:hidden; padding:0; }
+  .rc svg { width:22px; height:22px; fill:none; stroke:var(--ink); stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+  .rc.face svg { width:100%; height:100%; stroke:none; }
+  .search { margin:0 12px 6px; display:none; } .search.on { display:block; }
+  .search input { width:100%; height:42px; border:0; border-radius:999px; padding:0 16px; background:rgba(255,255,255,.7); font-size:16px; outline:0; }
+  .tabs { display:flex; gap:6px; padding:6px 12px; overflow-x:auto; scrollbar-width:none; }
+  .tabs::-webkit-scrollbar { display:none; }
+  .tab { flex:none; height:40px; padding:0 16px; border:0; border-radius:999px; background:none; font-weight:700; font-size:16px; color:#5C4254; display:flex; align-items:center; gap:8px; cursor:pointer; }
+  .tab.on { background:var(--pink2); color:var(--ink); }
+  .badge { background:var(--plum); color:#fff; border-radius:999px; min-width:22px; height:22px; padding:0 6px; display:grid; place-items:center; font-size:13px; font-weight:800; }
+  .rows { flex:1; overflow-y:auto; padding:6px 0 90px; }
+  .row { display:flex; align-items:center; gap:14px; padding:10px 14px; width:100%; border:0; background:none; text-align:left; cursor:pointer; }
+  .av { width:56px; height:56px; border-radius:50%; background:var(--pink2); overflow:hidden; flex:none; display:grid; place-items:center; }
+  .av.ring { box-shadow:0 0 0 3px var(--plum); border:3px solid #F6BFE3; }
+  .av svg { width:100%; height:100%; display:block; }
+  .nm { font-size:18px; font-weight:700; } .st { font-size:14px; font-weight:600; color:#6B5063; margin-top:2px; } .st.new { color:#3B8BEA; }
+  .empty { padding:40px 28px; text-align:center; font-weight:700; color:#6B5063; }
+  .fab { position:fixed; right:18px; bottom:calc(var(--nav-h) + env(safe-area-inset-bottom,0px) + 18px); width:62px; height:62px; border-radius:50%; border:0; background:var(--plum); cursor:pointer; display:grid; place-items:center; box-shadow:0 6px 16px rgba(90,15,74,.4); }
+  .fab svg { width:30px; height:30px; stroke:#fff; stroke-width:2.6; stroke-linecap:round; }
+
+  .thread { position:fixed; inset:0; z-index:30; background:#FCE9F4; display:flex; flex-direction:column; }
+  .thread[hidden] { display:none; }
+  .th { display:flex; align-items:center; gap:10px; padding:calc(10px + env(safe-area-inset-top,0px)) 12px 10px; background:var(--pink); }
+  .th .av { width:42px; height:42px; } .th b { font-size:18px; flex:1; }
+  .msgs { flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:6px; }
+  .m { max-width:78%; padding:9px 13px; border-radius:18px; font-size:16px; line-height:1.3; word-wrap:break-word; background:#fff; align-self:flex-start; }
+  .m.me { align-self:flex-end; background:var(--plum); color:#fff; }
+  .m small { display:block; font-size:11px; opacity:.6; margin-top:2px; }
+  .comp { display:flex; gap:8px; padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px)); background:var(--pink); }
+  .comp input { flex:1; height:46px; border:0; border-radius:999px; padding:0 16px; font-size:16px; outline:0; background:#fff; }
+  .send { width:46px; height:46px; border-radius:50%; border:0; background:var(--plum); cursor:pointer; display:grid; place-items:center; }
+  .send svg { width:22px; height:22px; fill:none; stroke:#fff; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+
+  .modal { position:fixed; z-index:50; inset:0; background:rgba(0,0,0,.45); display:flex; align-items:flex-end; justify-content:center; }
+  .modal[hidden] { display:none; }
+  .panel { width:100%; max-width:440px; background:#fff; border-radius:24px 24px 0 0; padding:20px 20px calc(20px + env(safe-area-inset-bottom,0px)); }
+  .panel h2 { font-size:20px; font-weight:800; } .panel p { font-size:14px; font-weight:600; color:#6B5063; margin:4px 0 12px; }
+  .panel input { width:100%; height:48px; border:2px solid #E6D3E0; border-radius:12px; padding:0 14px; font-size:16px; outline:0; }
+  .panel .err { color:#B3261E; min-height:20px; margin:8px 0 0; }
+  .pbtn { display:block; width:100%; height:46px; border-radius:999px; border:0; font-weight:800; font-size:15px; cursor:pointer; margin-top:8px; background:var(--plum); color:#fff; }
+  .pbtn.light { background:#F4E4EE; color:var(--ink); }
+  nav { position:fixed; z-index:20; left:0; right:0; bottom:0; height:calc(var(--nav-h) + env(safe-area-inset-bottom,0px)); padding-bottom:env(safe-area-inset-bottom,0px); background:#fff; border-top:1px solid #E6E2D8; display:grid; grid-template-columns:repeat(7,1fr); }
+  .nb { border:0; background:none; text-decoration:none; font-size:10.5px; font-weight:700; color:#6B6558; height:var(--nav-h); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; cursor:pointer; }
+  .nb svg { width:23px; height:23px; fill:none; stroke:currentColor; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; }
+  .nb.on { color:#17140F; } .nb.on svg { fill:#17140F; }
+  .nb.live svg { width:38px; height:32px; } .nb.live .tv { fill:#FFC20E; stroke:#17140F; }
+  #toast { position:fixed; z-index:60; left:50%; bottom:calc(var(--nav-h) + env(safe-area-inset-bottom,0px) + 90px); transform:translateX(-50%); background:var(--ink); color:#fff; padding:10px 16px; border-radius:999px; font-weight:700; font-size:14px; opacity:0; pointer-events:none; transition:opacity .2s; }
+  #toast.show { opacity:1; }
+</style>
+</head>
+<body>
+<div class="bg"><svg viewBox="0 0 100 90" fill="none" stroke="#fff" stroke-width="1.4"><path id="h" d="M50 88C10 60 0 38 0 24C0 10 12 0 26 0C36 0 46 6 50 14C54 6 64 0 74 0C88 0 100 10 100 24C100 38 90 60 50 88Z"/><path transform="translate(12 10) scale(.76)" d="M50 88C10 60 0 38 0 24C0 10 12 0 26 0C36 0 46 6 50 14C54 6 64 0 74 0C88 0 100 10 100 24C100 38 90 60 50 88Z"/><path transform="translate(24 20) scale(.52)" d="M50 88C10 60 0 38 0 24C0 10 12 0 26 0C36 0 46 6 50 14C54 6 64 0 74 0C88 0 100 10 100 24C100 38 90 60 50 88Z"/></svg></div>
+
+<section class="list" id="list">
+  <div class="top">
+    <a class="rc face" id="meface" href="me.html" aria-label="Me"></a>
+    <button class="rc" id="sbtn" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+    <h1>Chat</h1>
+    <button class="rc" id="addtop" aria-label="Add friend"><svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 21c0-4 3-7 7-7M18 14v6M15 17h6"/></svg></button>
+    <a class="rc" href="phone.html" aria-label="Back to phone"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.2" fill="#17140F"/><circle cx="12" cy="12" r="1.2" fill="#17140F"/><circle cx="19" cy="12" r="1.2" fill="#17140F"/></svg></a>
+  </div>
+  <div class="search" id="search"><input id="q" type="search" placeholder="Search friends" autocomplete="off"></div>
+  <div class="tabs">
+    <button class="tab on" data-t="all">All</button>
+    <button class="tab" data-t="unread">Unread <span class="badge" id="un">0</span></button>
+    <button class="tab" data-t="groups">Groups</button>
+    <button class="tab" data-t="stories">Stories</button>
+  </div>
+  <div class="rows" id="rows"></div>
+</section>
+<button class="fab" id="fab" aria-label="New chat"><svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></svg></button>
+
+<section class="thread" id="thread" hidden>
+  <div class="th"><button class="rc" id="tback" aria-label="Back"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><div class="av" id="tav"></div><b id="tname"></b></div>
+  <div class="msgs" id="msgs"></div>
+  <form class="comp" id="comp"><input id="mi" placeholder="Send a chat" autocomplete="off"><button class="send" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-3-7z"/></svg></button></form>
+</section>
+
+<div class="modal" id="addm" hidden><div class="panel"><h2>Add a friend</h2><p>Type their username to start a chat.</p><input id="un_in" placeholder="@username" autocapitalize="none" autocomplete="off"><p class="err" id="err"></p><button class="pbtn" id="addgo">Start chat</button><button class="pbtn light" id="addx">Cancel</button></div></div>
+<nav aria-label="Main"><a class="nb" href="city.html"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Map</a><a class="nb" href="city.html?open=buy"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM5 14v6h14v-6"/></svg>Buy</a><a class="nb" href="city.html?open=home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/></svg>Home</a><button class="nb live" data-soon="Live" aria-label="Live"><svg viewBox="0 0 44 36"><path d="M16 5l6 5 6-5" stroke-width="2"/><rect class="tv" x="3" y="9" width="38" height="24" rx="6" stroke-width="2"/><text x="22" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#17140F" stroke="none" font-family="Nunito Sans,Arial,sans-serif">LIVE</text></svg></button><a class="nb on" href="phone.html"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg>Phone</a><button class="nb" data-soon="Earn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 8l3 4 3-4M9 12h6M9 15h6M12 12v6"/></svg>Earn</button><a class="nb" href="me.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></svg>Me</a></nav>
+<div id="toast" role="status"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import { getFirestore, doc, getDoc, setDoc, updateDoc, collection, addDoc, query, where, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+const app = initializeApp({
+  apiKey: "AIzaSyC42fUKbNURnKeZR5KLjrAk9StZSbaUB9g", authDomain: "repaid-edef4.firebaseapp.com", projectId: "repaid-edef4",
+  storageBucket: "repaid-edef4.firebasestorage.app", messagingSenderId: "514373962526", appId: "1:514373962526:web:244c032e8b3b3b0002570f"
+});
+const auth = getAuth(app), db = getFirestore(app);
+/* ---- avatar drawing (same as the creator and the city) ---- */
+const DEFAULT = { body:"man", skin:"#8D5A3B", hairStyle:"short", hairColor:"#1B1210", beard:"none", topStyle:"long", top:"#FFFFFF", bottomStyle:"pants", bottom:"#4D6A96", shoes:"#E8E8EC", hat:"none" };
+function avatarSVG(cfg) {
+  const c = Object.assign({}, DEFAULT, cfg || {}), w = c.body === "woman", tx = w ? 33 : 30, tw = w ? 34 : 40;
+  let s = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 200">';
+  if (c.hairStyle === "afro") s += `<circle cx="50" cy="24" r="25" fill="${c.hairColor}"/>`;
+  if (c.hairStyle === "long") s += `<path d="M32 36q-4-27 18-27t18 27l3 44h-11V50H40v30H29z" fill="${c.hairColor}"/>`;
+  s += `<ellipse cx="41" cy="192" rx="10" ry="5" fill="${c.shoes}"/><ellipse cx="59" cy="192" rx="10" ry="5" fill="${c.shoes}"/>`;
+  if (c.bottomStyle === "skirt") { s += `<rect x="38" y="140" width="9" height="50" rx="4" fill="${c.skin}"/><rect x="53" y="140" width="9" height="50" rx="4" fill="${c.skin}"/><path d="M${tx-1} 112h${tw+2}l8 40H${tx-9}z" fill="${c.bottom}"/>`; }
+  else { s += `<rect x="36" y="110" width="13" height="80" rx="5" fill="${c.bottom}"/><rect x="51" y="110" width="13" height="80" rx="5" fill="${c.bottom}"/><rect x="${tx}" y="104" width="${tw}" height="16" fill="${c.bottom}"/>`; }
+  if (c.topStyle === "long") s += `<rect x="${tx-11}" y="64" width="11" height="50" rx="5" fill="${c.top}"/><rect x="${tx+tw}" y="64" width="11" height="50" rx="5" fill="${c.top}"/>`;
+  else s += `<rect x="${tx-9}" y="66" width="9" height="46" rx="4" fill="${c.skin}"/><rect x="${tx+tw}" y="66" width="9" height="46" rx="4" fill="${c.skin}"/><rect x="${tx-11}" y="64" width="11" height="20" rx="5" fill="${c.top}"/><rect x="${tx+tw}" y="64" width="11" height="20" rx="5" fill="${c.top}"/>`;
+  s += `<circle cx="${tx-5}" cy="117" r="5.5" fill="${c.skin}"/><circle cx="${tx+tw+5}" cy="117" r="5.5" fill="${c.skin}"/>`;
+  s += `<path d="M${tx} 68q0-8 9-10h${tw-18}q9 2 9 10v50H${tx}z" fill="${c.top}"/><rect x="45" y="50" width="10" height="12" fill="${c.skin}"/>`;
+  s += `<circle cx="34" cy="38" r="4" fill="${c.skin}"/><circle cx="66" cy="38" r="4" fill="${c.skin}"/><ellipse cx="50" cy="36" rx="16" ry="19" fill="${c.skin}"/>`;
+  s += `<ellipse cx="43" cy="37" rx="3.4" ry="2.4" fill="#fff"/><ellipse cx="57" cy="37" rx="3.4" ry="2.4" fill="#fff"/><circle cx="43.6" cy="37" r="1.7" fill="#1B1210"/><circle cx="57.6" cy="37" r="1.7" fill="#1B1210"/>`;
+  s += `<path d="M39 32q4-3 8 0M53 32q4-3 8 0" stroke="#1B1210" stroke-width="1.6" fill="none" stroke-linecap="round"/>`;
+  if (w) s += `<path d="M39.5 35.5l-2-1.2M60.5 35.5l2-1.2" stroke="#1B1210" stroke-width="1.2" stroke-linecap="round"/>`;
+  s += `<path d="M48 42q2 2 4 0" stroke="rgba(0,0,0,.25)" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M45 47q5 3 10 0" stroke="#6B2F25" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
+  if (c.beard === "goatee") s += `<path d="M43 44q7-3 14 0q-7 2-14 0z" fill="${c.hairColor}"/><path d="M44 49q6 10 12 0q-6 2-12 0z" fill="${c.hairColor}"/>`;
+  if (c.beard === "full") s += `<path d="M34 38q0 26 16 26t16-26q-3 14-16 14T34 38z" fill="${c.hairColor}"/><path d="M43 44q7-3 14 0q-7 2-14 0z" fill="${c.hairColor}"/>`;
+  if (["short","bun","long"].includes(c.hairStyle)) s += `<path d="M34 34q0-21 16-21t16 21q-6-9-16-9t-16 9z" fill="${c.hairColor}"/>`;
+  if (c.hairStyle === "bun") s += `<circle cx="50" cy="9" r="7" fill="${c.hairColor}"/>`;
+  if (c.hat === "beanie") s += `<path d="M33 31q0-21 17-21t17 21z" fill="#3B6FD6"/><rect x="32" y="28" width="36" height="7" rx="3" fill="#2F58AE"/>`;
+  if (c.hat === "cap") s += `<path d="M34 31q0-19 16-19t16 19z" fill="#D9442B"/><path d="M32 31h34q9 0 12 5H32z" fill="#A83320"/>`;
+  if (c.hat === "fur") s += `<path d="M25 44q-4-34 25-34t25 34q-3-10-7-16-14-9-36 0-4 6-7 16z" fill="#7A5636"/><ellipse cx="29" cy="46" rx="6" ry="13" fill="#6A4A2E"/><ellipse cx="71" cy="46" rx="6" ry="13" fill="#6A4A2E"/>`;
+  return s + "</svg>";
+}
+const faceSVG = (cfg) => avatarSVG(cfg).replace('viewBox="0 0 100 200"', 'viewBox="20 -6 60 60"');
+
+const $ = (id) => document.getElementById(id);
+function toast(t) { const el = $("toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("show"), 2000); }
+document.querySelectorAll("[data-soon]").forEach((b) => b.onclick = () => toast(b.dataset.soon + " is coming next"));
+
+let uid = null, chats = [], prof = {}, tab = "all", q = "", cur = null, unsubMsgs = null;
+const ago = (t) => { const s = (Date.now() - t) / 1000; return s < 60 ? "now" : s < 3600 ? Math.floor(s / 60) + "m" : s < 86400 ? Math.floor(s / 3600) + "h" : Math.floor(s / 86400) + "d"; };
+const PERSON = '<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#fff"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6z" fill="#fff"/></svg>';
+const face = (p) => p && p.avatar ? faceSVG(p.avatar) : PERSON;
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const unread = (c) => c.lastFrom && c.lastFrom !== uid && ((c.seen && c.seen[uid]) || 0) < c.lastAt;
+async function getProf(id) {
+  if (prof[id]) return prof[id];
+  try { const s = await getDoc(doc(db, "profiles", id)); prof[id] = s.exists() ? s.data() : { name: "Unknown" }; } catch (e) { prof[id] = { name: "Unknown" }; }
+  return prof[id];
+}
+
+function renderList() {
+  const n = chats.filter(unread).length; $("un").textContent = n; $("un").style.display = n ? "grid" : "none";
+  const list = chats.filter((c) => {
+    const p = prof[c.other] || {}, nm = ((p.name || "") + " " + (p.username || "")).toLowerCase();
+    return (!q || nm.includes(q)) && (tab !== "unread" || unread(c));
+  }).sort((a, b) => b.lastAt - a.lastAt);
+  if (!list.length) { $("rows").innerHTML = '<p class="empty">' + (chats.length ? "Nothing here." : "No chats yet. Tap the plus button and add a friend by username.") + "</p>"; return; }
+  $("rows").innerHTML = list.map((c) => {
+    const p = prof[c.other] || {}, u = unread(c);
+    const st = c.lastFrom ? (u ? "New Chat" : c.lastFrom === uid ? "Sent" : "Received") + " \u00B7 " + ago(c.lastAt) : "Say hi";
+    return '<button class="row" data-id="' + c.id + '"><span class="av' + (u ? " ring" : "") + '">' + face(p) + '</span><span><div class="nm">' + esc(p.name || p.username || "Friend") + '</div><div class="st' + (u ? " new" : "") + '">' + st + "</div></span></button>";
+  }).join("");
+}
+$("rows").onclick = (e) => { const b = e.target.closest(".row"); if (b) openThread(chats.find((c) => c.id === b.dataset.id)); };
+document.querySelectorAll(".tab").forEach((b) => b.onclick = () => {
+  if (b.dataset.t === "groups" || b.dataset.t === "stories") return toast(b.textContent.trim() + " is coming next");
+  tab = b.dataset.t; document.querySelectorAll(".tab").forEach((x) => x.classList.toggle("on", x === b)); renderList();
+});
+$("sbtn").onclick = () => { $("search").classList.toggle("on"); if ($("search").classList.contains("on")) $("q").focus(); else { $("q").value = ""; q = ""; renderList(); } };
+$("q").oninput = () => { q = $("q").value.trim().toLowerCase(); renderList(); };
+
+/* thread */
+function openThread(c) {
+  cur = c; const p = prof[c.other] || {};
+  $("tav").innerHTML = face(p); $("tname").textContent = p.name || p.username || "Friend";
+  $("thread").hidden = false; $("msgs").innerHTML = "";
+  const cref = doc(db, "chats", c.id);
+  updateDoc(cref, { ["seen." + uid]: Date.now() }).catch(() => {});
+  if (unsubMsgs) unsubMsgs();
+  unsubMsgs = onSnapshot(query(collection(db, "chats", c.id, "messages"), orderBy("at")), (s) => {
+    $("msgs").innerHTML = s.docs.map((d) => { const m = d.data(); return '<div class="m' + (m.from === uid ? " me" : "") + '">' + esc(m.text) + "<small>" + ago(m.at) + "</small></div>"; }).join("");
+    $("msgs").scrollTop = $("msgs").scrollHeight;
+    const last = s.docs[s.docs.length - 1]; if (last && last.data().from !== uid) updateDoc(cref, { ["seen." + uid]: Date.now() }).catch(() => {});
+  });
+}
+$("tback").onclick = () => { $("thread").hidden = true; if (unsubMsgs) unsubMsgs(); unsubMsgs = null; cur = null; };
+$("comp").onsubmit = async (e) => {
+  e.preventDefault(); const text = $("mi").value.trim(); if (!text || !cur) return; $("mi").value = "";
+  const now = Date.now();
+  try {
+    await addDoc(collection(db, "chats", cur.id, "messages"), { from: uid, text, at: now });
+    await updateDoc(doc(db, "chats", cur.id), { lastText: text, lastFrom: uid, lastAt: now, ["seen." + uid]: now });
+  } catch (err) { toast("Message not sent. Check your connection."); }
+};
+
+/* add friend */
+const openAdd = () => { $("err").textContent = ""; $("un_in").value = ""; $("addm").hidden = false; $("un_in").focus(); };
+$("fab").onclick = openAdd; $("addtop").onclick = openAdd; $("addx").onclick = () => { $("addm").hidden = true; };
+$("addgo").onclick = async () => {
+  const u = $("un_in").value.trim().toLowerCase().replace(/^@/, ""); if (!u) return;
+  $("err").textContent = "";
+  try {
+    const s = await getDoc(doc(db, "usernames", u));
+    if (!s.exists()) { $("err").textContent = "No one has that username."; return; }
+    const other = s.data().uid; if (other === uid) { $("err").textContent = "That is you."; return; }
+    const id = [uid, other].sort().join("_");
+    await setDoc(doc(db, "chats", id), { members: [uid, other], lastAt: Date.now() }, { merge: true });
+    await getProf(other); $("addm").hidden = true;
+    openThread({ id, other, members: [uid, other], lastAt: Date.now() });
+  } catch (e) { $("err").textContent = "Could not add them. Check the Firestore rules."; }
+};
+
+onAuthStateChanged(auth, async (u) => {
+  if (!u) { go("login.html?mode=login",true); return; }
+  uid = u.uid;
+  try {
+    const s = await getDoc(doc(db, "users", uid)), d = s.exists() ? s.data() : null;
+    if (!d || !d.avatar) { go("avatar.html",true); return; }
+    prof[uid] = { name: d.name, username: d.username, avatar: d.avatar };
+    $("meface").innerHTML = faceSVG(d.avatar);
+    setDoc(doc(db, "profiles", uid), prof[uid]).catch(() => {});
+    if (d.username) setDoc(doc(db, "usernames", d.username), { uid }).catch(() => {});
+  } catch (e) {}
+  onSnapshot(query(collection(db, "chats"), where("members", "array-contains", uid)), async (s) => {
+    chats = s.docs.map((d) => Object.assign({ id: d.id, lastAt: 0 }, d.data()));
+    chats.forEach((c) => c.other = c.members.find((m) => m !== uid));
+    await Promise.all(chats.map((c) => getProf(c.other)));
+    renderList();
+  });
+});
+<\/script>
+</body>
+</html>
+</script>
+<script>
+(function () {
+  var pages = {};
+  document.querySelectorAll('script[data-page]').forEach(function (s) {
+    pages[s.dataset.page] = s.textContent.replace(/<\\\/script/g, '</script').replace(/<\\!--/g, '<!--');
+  });
+  var frame = document.getElementById('v');
+  window.__go = function (u, replace) {
+    var m = String(u).match(/^([\w-]+)\.html(?:\?(.*))?$/); if (!m) return;
+    var t = '#/' + (m[1] === 'index' ? '' : m[1]) + (m[2] ? '?' + m[2] : '');
+    if (replace) location.replace(t); else location.hash = t;
+  };
+  function route() {
+    var h = location.hash.replace(/^#\/?/, ''), parts = h.split('?'), key = pages[parts[0]] ? parts[0] : 'home';
+    var pre = '<head><script>window.__Q=' + JSON.stringify(parts[1] || '') + ';window.go=function(u,r){parent.__go(u,r)}<\/script>';
+    frame.srcdoc = pages[key].replace('<head>', function () { return pre; });
+  }
+  frame.addEventListener('load', function () {
+    try {
+      var d = frame.contentDocument; document.title = d.title || 'Lapo Baby';
+      d.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href]'); if (!a) return;
+        var h = a.getAttribute('href');
+        if (/^[\w-]+\.html(\?|$)/.test(h)) { e.preventDefault(); window.__go(h); }
+      });
+    } catch (e) {}
+  });
+  addEventListener('hashchange', route); route();
 })();
 </script>
 </body>
