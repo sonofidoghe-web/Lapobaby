@@ -2265,9 +2265,10 @@ onAuthStateChanged(auth, async (u) => {
 </script>
 <script>
 (function () {
-  var pages = {};
+  var LT = '<', pages = {};
+  var END = LT + '/script', COM = LT + '!--';
   document.querySelectorAll('script[data-page]').forEach(function (s) {
-    pages[s.dataset.page] = s.textContent.replace(/<\\\/script/g, '</script').replace(/<\\!--/g, '<!--');
+    pages[s.dataset.page] = s.textContent.split(LT + '\\/script').join(END).split(LT + '\\!--').join(COM);
   });
   var frame = document.getElementById('v');
   window.__go = function (u, replace) {
@@ -2277,8 +2278,8 @@ onAuthStateChanged(auth, async (u) => {
   };
   function route() {
     var h = location.hash.replace(/^#\/?/, ''), parts = h.split('?'), key = pages[parts[0]] ? parts[0] : 'home';
-    var pre = '<head><script>window.__Q=' + JSON.stringify(parts[1] || '') + ';window.go=function(u,r){parent.__go(u,r)}<\/script>';
-    frame.srcdoc = pages[key].replace('<head>', function () { return pre; });
+    var pre = LT + 'head>' + LT + 'script>window.__Q=' + JSON.stringify(parts[1] || '') + ';window.go=function(u,r){parent.__go(u,r)}' + END + '>';
+    frame.srcdoc = pages[key].replace(LT + 'head>', function () { return pre; });
   }
   frame.addEventListener('load', function () {
     try {
